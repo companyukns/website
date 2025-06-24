@@ -68,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mobileAccordions.forEach(accordion => {
         const button = accordion.querySelector('button');
-        const content = accordion.querySelector('div'); // Das erste div im Accordion ist der Content-Wrapper
+        // KORRIGIERTER SELEKTOR: Wählt das nächste Geschwisterelement des Buttons.
+        const content = button ? button.nextElementSibling : null;
         const arrow = accordion.querySelector('.js-accordion-arrow');
 
         if (button && content) {
