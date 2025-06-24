@@ -1,8 +1,7 @@
 /*
 ================================================================================
   Alpine.js v3.13.5
-  Copyright © 2019-2023 Caleb Porzio and contributors
-  License: MIT
+  ... (der komplette Alpine-Code bleibt hier unverändert) ...
 ================================================================================
 */
 (()=>{var T=!1,g=!1,_=[],p=-1;function y(e){S(e)}function S(e){_.includes(e)||_.push(e),h()}function P(e){let t=_.indexOf(e);t!==-1&&t>p&&_.splice(t,1)}function h(){!g&&!T&&(T=!0,queueMicrotask($))}function $(){T=!1,g=!0;for(let e=0;e<_.length;e++)_[e](),p=e;_.length=0,p=-1,g=!1}var b,O,w,N,F=!0;function Y(e){F=!1,e(),F=!0}function ge(e){b=e.reactive,w=e.release,O=t=>e.effect(t,{scheduler:n=>{F?y(n):n()}}),N=e.raw}function be(e){O=e}function Ee(e){let t=()=>{};return[n=>{let i=O(n);return e._x_effects||(e._x_effects=new Set,e._x_runEffects=()=>{e._x_effects.forEach(r=>r())}),e._x_effects.add(i),t=()=>{i!==void 0&&(e._x_effects.delete(i),w(i))},i},()=>{t()}]}function ye(e,t){let n=!0,i,r=O(()=>{let o=e();JSON.stringify(o),n?i=o:queueMicrotask(()=>{t(o,i),i=o}),n=!1});return()=>w(r)}function ae(e,t,n={}){e.dispatchEvent(new CustomEvent(t,{detail:n,bubbles:!0,composed:!0,cancelable:!0}))}function z(e,t){if(typeof ShadowRoot=="function"&&e instanceof ShadowRoot){Array.from(e.children).forEach(r=>z(r,t));return}let n=!1;if(t(e,()=>n=!0),n)return;let i=e.firstElementChild;for(;i;)z(i,t,!1),i=i.nextElementSibling}function U(e,...t){console.warn(`Alpine Warning: ${e}`,...t)}var L=!1;function ee(){L&&U("Alpine has already been initialized on this page. Calling Alpine.start() more than once can cause problems."),L=!0,document.body||U("Unable to initialize. Trying to load Alpine before `<body>` is available. Did you forget to add `defer` in Alpine's `<script>` tag?"),ae(document,"alpine:init"),ae(document,"alpine:initializing"),E(),se(t=>ne(t,z)),D(t=>ve(t)),R((t,n)=>{vt(t,n).forEach(i=>i())});let e=t=>!V(t.parentElement,!0);Array.from(document.querySelectorAll(k().join(","))).filter(e).forEach(t=>{ne(t)}),ae(document,"alpine:initialized")}var le=[],d=[];function u(){return le.map(e=>e())}function k(){return le.concat(d).map(e=>e())}function m(e){le.push(e)}function I(e){d.push(e)}function V(e,t=!1){return te(e,n=>{if((t?k():u()).some(i=>n.matches(i)))return!0})}function te(e,t){if(e){if(t(e))return e;if(e._x_teleportBack&&(e=e._x_teleportBack),!!e.parentElement)return te(e.parentElement,t)}}function he(e){return u().some(t=>e.matches(t))}var pe=[];function Me(e){pe.push(e)}function ne(e,t=z,n=()=>{}){di(()=>{t(e,(i,r)=>{n(i,r),pe.forEach(o=>o(i,r)),vt(i,i.attributes).forEach(o=>o()),i._x_ignore&&r()})})}function ve(e){z(e,t=>{ce(t),_e(t)})}var ie=[],Z=[],re=[];function se(e){re.push(e)}function D(e,t){typeof t=="function"?(e._x_cleanups||(e._x_cleanups=[]),e._x_cleanups.push(t)):(t=e,Z.push(t))}function R(e){ie.push(e)}function J(e,t,n){e._x_attributeCleanups||(e._x_attributeCleanups={}),e._x_attributeCleanups[t]||(e._x_attributeCleanups[t]=[]),e._x_attributeCleanups[t].push(n)}function ce(e,t){e._x_attributeCleanups&&Object.entries(e._x_attributeCleanups).forEach(([n,i])=>{(t===void 0||t.includes(n))&&(i.forEach(r=>r()),delete e._x_attributeCleanups[n])})}function _e(e){if(e._x_cleanups)for(;e._x_cleanups.length;)e._x_cleanups.pop()()}var oe=new MutationObserver(dt),j=!1;function E(){oe.observe(document,{subtree:!0,childList:!0,attributes:!0,attributeOldValue:!0}),j=!0}function K(){Ue(),oe.disconnect(),j=!1}var Q=[];function Ue(){let e=oe.takeRecords();Q.push(()=>e.length>0&&dt(e));let t=Q.length;queueMicrotask(()=>{if(Q.length===t)for(;Q.length>0;)Q.shift()()})}function B(e){if(!j)return e();K();let t=e();return E(),t}var ft=!1,Ve=[];function ti(){ft=!0}function ni(){ft=!1,dt(Ve),Ve=[]}function dt(e){if(ft){Ve=Ve.concat(e);return}let t=new Set,n=new Set,i=new Map,r=new Map;for(let o=0;o<e.length;o++)if(!e[o].target._x_ignoreMutationObserver&&(e[o].type==="childList"&&(e[o].addedNodes.forEach(a=>a.nodeType===1&&t.add(a)),e[o].removedNodes.forEach(a=>a.nodeType===1&&n.add(a))),e[o].type==="attributes")){let a=e[o].target,l=e[o].attributeName,s=e[o].oldValue,c=()=>{i.has(a)||i.set(a,[]),i.get(a).push({name:l,value:a.getAttribute(l)})},f=()=>{r.has(a)||r.set(a,[]),r.get(a).push(l)};a.hasAttribute(l)&&s===null?c():a.hasAttribute(l)?(f(),c()):f()}r.forEach((o,a)=>{ce(a,o)}),i.forEach((o,a)=>{ie.forEach(l=>l(a,o))});for(let o of n)t.has(o)||(Z.forEach(a=>a(o)),ve(o));t.forEach(o=>{o._x_ignoreSelf=!0,o._x_ignore=!0});for(let o of t)n.has(o)||o.isConnected&&(delete o._x_ignoreSelf,delete o._x_ignore,re.forEach(a=>a(o)),o._x_ignore=!0,o._x_ignoreSelf=!0);t.forEach(o=>{delete o._x_ignoreSelf,delete o._x_ignore}),t=null,n=null,i=null,r=null}function Ft(e){return Re(Ne(e))}function ze(e,t,n){return e._x_dataStack=[t,...Ne(n||e)],()=>{e._x_dataStack=e._x_dataStack.filter(i=>i!==t)}}function Ne(e){return e._x_dataStack?e._x_dataStack:typeof ShadowRoot=="function"&&e instanceof ShadowRoot?Ne(e.host):e.parentNode?Ne(e.parentNode):[]}function Re(e){return new Proxy({objects:e},ii)}var ii={ownKeys({objects:e}){return Array.from(new Set(e.flatMap(t=>Object.keys(t))))},has({objects:e},t){return t==Symbol.unscopables?!1:e.some(n=>Object.prototype.hasOwnProperty.call(n,t))},get({objects:e},t,n){return t=="toJSON"?ri:Reflect.get(e.find(i=>Object.prototype.hasOwnProperty.call(i,t))||{},t,n)},set({objects:e},t,n,i){let r=e.find(a=>Object.prototype.hasOwnProperty.call(a,t))||e[e.length-1],o=Object.getOwnPropertyDescriptor(r,t);return o?.set&&o?.get?Reflect.set(r,t,n,i):Reflect.set(r,t,n)}};function ri(){return Reflect.ownKeys(this).reduce((e,t)=>(e[t]=Reflect.get(this,t),e),{})}function Ht(e){let t=i=>typeof i=="object"&&!Array.isArray(i)&&i!==null,n=(i,r="")=>{Object.entries(Object.getOwnPropertyDescriptors(i)).forEach(([o,{value:a,enumerable:l}])=>{if(l===!1||a===void 0)return;let s=r===""?o:`${r}.${o}`;typeof a=="object"&&a!==null&&a._x_interceptor?i[o]=a.initialize(e,s,o):t(a)&&a!==i&&!(a instanceof Element)&&n(a,s)})};return n(e)}function Kt(e,t=()=>{}){let n={initialValue:void 0,_x_interceptor:!0,initialize(i,r,o){return e(this.initialValue,()=>oi(i,r),a=>Ut(i,r,a),r,o)}};return t(n),i=>{if(typeof i=="object"&&i!==null&&i._x_interceptor){let r=n.initialize.bind(n);n.initialize=(o,a,l)=>{let s=i.initialize(o,a,l);return n.initialValue=s,r(o,a,l)}}else n.initialValue=i;return n}}function oi(e,t){return t.split(".").reduce((n,i)=>n[i],e)}function Ut(e,t,n){if(typeof t=="string"&&(t=t.split(".")),t.length===1)e[t[0]]=n;else{if(t.length===0)throw error;return e[t[0]]||(e[t[0]]={}),Ut(e[t[0]],t.slice(1),n)}}var Vt={};function fe(e,t){Vt[e]=t}function pt(e,t){return Object.entries(Vt).forEach(([n,i])=>{let r=null;function o(){if(r)return r;{let[a,l]=Qt(t);return r={interceptor:Kt,...a},D(t,l),r}}Object.defineProperty(e,`$${n}`,{get(){return i(t,o())},enumerable:!1})}),e}function ai(e,t,n,...i){try{return n(...i)}catch(r){De(r,e,t)}}function De(e,t,n=void 0){e=Object.assign(e??{message:"No error message given."},{el:t,expression:n}),console.warn(`Alpine Expression Error: ${e.message}
@@ -23,7 +22,7 @@ ${n?'Expression: "'+n+`"
 
 /*
 ================================================================================
-  INITIALIZATION & CUSTOM SCRIPTS
+  INITIALIZATION & KORRIGIERTES, ROBUSTES NAVIGATIONSSKRIPT
 ================================================================================
 */
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     ----------------------------------------------------------------
       Custom Navigation Script for UKNS
-      Handles desktop dropdowns, mobile menu toggle, and accordions.
     ----------------------------------------------------------------
     */
     
@@ -43,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const arrow = dropdown.querySelector('.js-dropdown-arrow');
 
         dropdown.addEventListener('mouseenter', () => {
-            if (submenu) submenu.classList.remove('hidden');
+            if (submenu) submenu.style.display = 'block';
             if (arrow) arrow.classList.add('rotate-180');
         });
 
         dropdown.addEventListener('mouseleave', () => {
-            if (submenu) submenu.classList.add('hidden');
+            if (submenu) submenu.style.display = 'none';
             if (arrow) arrow.classList.remove('rotate-180');
         });
     });
@@ -59,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
+            mobileMenu.style.display = isHidden ? 'block' : 'none';
         });
     }
 
@@ -67,14 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileAccordions = document.querySelectorAll('.js-mobile-accordion');
 
     mobileAccordions.forEach(accordion => {
-        const button = accordion.querySelector('button');
-        // KORRIGIERTER SELEKTOR: Wählt das nächste Geschwisterelement des Buttons.
-        const content = button ? button.nextElementSibling : null;
-        const arrow = accordion.querySelector('.js-accordion-arrow');
+        const button = accordion.querySelector('.js-accordion-button');
+        const content = accordion.querySelector('.js-accordion-content');
+        const arrow = button ? button.querySelector('.js-accordion-arrow') : null;
 
         if (button && content) {
-            button.addEventListener('click', () => {
-                content.classList.toggle('hidden');
+            button.addEventListener('click', (e) => {
+                e.stopPropagation(); // Verhindert, dass andere Klick-Events ausgelöst werden
+                const isHidden = content.style.display === 'none' || content.style.display === '';
+                content.style.display = isHidden ? 'block' : 'none';
                 if (arrow) {
                     arrow.classList.toggle('rotate-180');
                 }
