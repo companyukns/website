@@ -31,3 +31,69 @@
         overflow-x: hidden;
     }
 }
+
+
+
+
+# CSS-Fix für Android-Menü-Problem  
+android_menu_fix = """/* Android Menu Fix */  
+/* Fügen Sie diesen Code am Ende Ihrer style.optimized.css ein oder in eine separate CSS-Datei */  
+  
+/* Fix für mobile Navigation auf Android */  
+@media (max-width: 767px) {  
+  /* Reset für Android-spezifische Probleme */  
+  .main-navigation {  
+    position: relative;  
+    -webkit-transform: translateZ(0);  
+    transform: translateZ(0);  
+  }  
+    
+  /* Fix für das mobile Menü */  
+  .md\:hidden[x-show="mobileMenu"] {  
+    position: fixed !important;  
+    top: 64px !important; /* Header-Höhe */  
+    left: 0 !important;  
+    right: 0 !important;  
+    width: 100% !important;  
+    max-width: 100vw !important;  
+    -webkit-transform: translateX(0) !important;  
+    transform: translateX(0) !important;  
+    margin-left: 0 !important;  
+    margin-right: 0 !important;  
+  }  
+    
+  /* Fix für Android Webkit-spezifische Probleme */  
+  header {  
+    -webkit-backface-visibility: hidden;  
+    backface-visibility: hidden;  
+    -webkit-transform: translateZ(0);  
+    transform: translateZ(0);  
+  }  
+    
+  /* Sicherstellen, dass das Logo und der Hamburger-Button richtig ausgerichtet sind */  
+  .flex.justify-between.items-center {  
+    width: 100%;  
+    position: relative;  
+  }  
+    
+  /* Fix für Hamburger-Button */  
+  .md\:hidden button {  
+    position: relative;  
+    z-index: 50;  
+    -webkit-tap-highlight-color: transparent;  
+  }  
+    
+  /* Overflow-Fix für Android */  
+  body {  
+    overflow-x: hidden !important;  
+    position: relative;  
+    width: 100%;  
+  }  
+    
+  /* Viewport-Fix für Android Chrome */  
+  html {  
+    overflow-x: hidden;  
+    width: 100%;  
+  }  
+}  
+  
