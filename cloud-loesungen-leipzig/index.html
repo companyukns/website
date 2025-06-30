@@ -15,7 +15,7 @@
 <meta content="#2b3990" name="msapplication-TileColor"/>
 <meta content="#ffffff" name="theme-color"/>
 <link as="font" crossorigin="" href="/fonts/montserrat-v30-latin-700.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/fonts/open-sans-v43-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="/css/style.optimized.css" rel="stylesheet"/></head>
-<body x-data="{ mobileMenu: false }">
+<body x-data="{ mobileMenu: false, openFaq: null }">
 <header class="bg-white shadow-sm fixed top-0 w-full z-40">
 <nav class="main-navigation max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-16">
@@ -30,8 +30,8 @@
 </div>
 <div class="hidden md:flex items-center space-x-1">
 <a aria-label="Startseite" class="menu-item text-gray-700 transition px-3 py-2" href="/"><i class="fas fa-home"></i></a>
-<div class="relative dropdown-container" x-data="{ open: false }">
-<a class="menu-item text-primary-blue transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-2"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
+<a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-2"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-beratung-leipzig/"><i class="fas fa-lightbulb fa-fw mr-2"></i>Microsoft 365 Beratung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-einrichtung-leipzig/"><i class="fas fa-play-circle fa-fw mr-2"></i>Microsoft 365 Einrichtung</a>
@@ -39,7 +39,7 @@
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-support-leipzig/"><i class="fas fa-headset fa-fw mr-2"></i>Microsoft 365 Support</a>
 </div>
 </div>
-<div class="relative dropdown-container" x-data="{ open: false }">
+<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-2"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2"></i>Endpoint Security</a>
@@ -50,7 +50,7 @@
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/virenschutz-leipzig/"> <i class="fas fa-shield-alt fa-fw mr-2"></i>Virenschutz</a>
 </div>
 </div>
-<div class="relative dropdown-container" x-data="{ open: false }">
+<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-2"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2"></i>KI-Automatisierung</a>
@@ -58,16 +58,16 @@
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/firma-webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2"></i>Webdesign für Firmen</a>
 </div>
 </div>
-<div class="relative dropdown-container" x-data="{ open: false }">
-<a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-2"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
+<a class="menu-item text-primary-blue transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-2"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
-<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2"></i>Backup-Lösungen</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-primary-blue font-bold" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2"></i>Backup-Lösungen</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2"></i>Datenrettung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2"></i>Netzwerkinstallation</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2"></i>Netzwerk-Optimierung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2"></i>Server-Datenrettung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2"></i>Server-Wartung</a>
-<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/virtualisierung-leipzig/"><i class="fas fa-cubes fa-fw mr-2"></i>Virtualisierung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/serverloesungen-leipzig/"><i class="fas fa-cubes fa-fw mr-2"></i>Virtualisierung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2"></i>WLAN-Probleme</a>
 </div>
 </div>
@@ -79,11 +79,11 @@
 <button @click="mobileMenu = !mobileMenu" aria-label="Mobiles Menü öffnen/schließen" class="text-gray-700 hover:text-primary-blue focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
 </div>
 </div>
-<div class="md:hidden bg-primary-blue absolute w-full left-0 shadow-lg" x-show="mobileMenu" x-transition="">
+<div @click.away="mobileMenu = false" class="md:hidden bg-primary-blue absolute w-full left-0 shadow-lg" x-show="mobileMenu" x-transition="">
 <div class="py-2 text-white">
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/"><i class="fas fa-home fa-fw mr-3"></i>Startseite</a>
 <div x-data="{ open: false }">
-<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition bg-primary-blue-dark">
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
 <span><i class="fas fa-cloud fa-fw mr-3"></i>Cloud</span>
 <i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
 </button>
@@ -95,7 +95,50 @@
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/microsoft-365-support-leipzig/"><i class="fas fa-headset fa-fw mr-2 opacity-70"></i>Microsoft 365 Support</a>
 </div>
 </div>
-<!-- other mobile menu items -->
+<div x-data="{ open: false }">
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
+<span><i class="fas fa-shield-alt fa-fw mr-3"></i>Cybersecurity</span>
+<i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
+</button>
+<div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 opacity-70"></i>Alle Sicherheitslösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2 opacity-70"></i>Endpoint Security</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/firma-firewall-schutzschild/"><i class="fas fa-fire-alt fa-fw mr-2 opacity-70"></i>Firewall-Schutz</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ransomware-protection-leipzig/"><i class="fas fa-lock fa-fw mr-2 opacity-70"></i>Ransomware-Schutz</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/secure-email-leipzig/"><i class="fas fa-envelope-open-text fa-fw mr-2 opacity-70"></i>Sichere E-Mail</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/videoueberwachung-leipzig/"><i class="fas fa-video fa-fw mr-2 opacity-70"></i>Videoüberwachung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/virenschutz-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 opacity-70"></i>Virenschutz</a>
+</div>
+</div>
+<div x-data="{ open: false }">
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
+<span><i class="fas fa-desktop fa-fw mr-3"></i>Digitales</span>
+<i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
+</button>
+<div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 opacity-70"></i>Alle Digital-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2 opacity-70"></i>KI-Automatisierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ki-leipzig/"><i class="fas fa-brain fa-fw mr-2 opacity-70"></i>KI-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/firma-webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 opacity-70"></i>Webdesign für Firmen</a>
+</div>
+</div>
+<div x-data="{ open: true }"> <!-- This section is open by default on this page -->
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg bg-primary-blue-dark transition">
+<span><i class="fas fa-server fa-fw mr-3"></i>Server &amp; Netzwerk</span>
+<i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
+</button>
+<div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/serverloesungen-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Alle Serverlösungen</a>
+<a class="block px-4 py-2 text-base bg-primary-blue font-bold transition" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 opacity-70"></i>Backup-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2 opacity-70"></i>Datenrettung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2 opacity-70"></i>Netzwerkinstallation</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2 opacity-70"></i>Netzwerk-Optimierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Server-Datenrettung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2 opacity-70"></i>Server-Wartung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/serverloesungen-leipzig/"><i class="fas fa-cubes fa-fw mr-2 opacity-70"></i>Virtualisierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2 opacity-70"></i>WLAN-Probleme</a>
+</div>
+</div>
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/it-wissen/"><i class="fas fa-book-open fa-fw mr-3"></i>IT-Wissen</a>
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/preisliste/"><i class="fas fa-tags fa-fw mr-3"></i>Preise</a>
 <div class="p-4">
