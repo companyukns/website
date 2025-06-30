@@ -21,63 +21,6 @@
     window.addEventListener('resize', findOverflowingElements);
   });
 </script>
-Ich verstehe das Problem besser jetzt. Es scheint, dass die Seite einen unerwünschten Rand auf der rechten Seite hat, der erst verschwindet, wenn Sie ganz nach unten scrollen. Dies ist oft ein Anzeichen für ein Element, das breiter als der Viewport ist und horizontales Scrollen verursacht.
-
-Hier ist eine präzisere Lösung:
-
-```css
-/* Fix für überlaufende Elemente und Rand auf Android */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-  max-width: 100%;
-}
-
-/* Stellt sicher, dass alle Container nicht breiter als der Viewport sind */
-.max-w-7xl, 
-section, 
-header, 
-footer, 
-main, 
-.network-bg, 
-.gradient-bg {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-/* Spezifisch für das mobile Menü */
-@media (max-width: 767px) {
-  header nav .md\:hidden {
-    width: 100%;
-    left: 0;
-    right: 0;
-    max-width: 100vw;
-  }
-  
-  /* Verhindert, dass Elemente im Menü überlaufen */
-  header nav .md\:hidden * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* Korrigiert mögliche Probleme mit Padding/Margin */
-  .px-4, .sm\:px-6, .lg\:px-8 {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-}
-
-/* Stellt sicher, dass Bilder nicht überlaufen */
-img, picture, svg {
-  max-width: 100%;
-  height: auto;
-}
-```
-
-Fügen Sie diesen Code in ein `<style>`-Tag am Ende Ihrer HTML-Datei ein, direkt vor dem schließenden `</body>`-Tag:
-
-```html
 <style>
   /* Fix für überlaufende Elemente und Rand auf Android */
   html, body {
@@ -127,37 +70,7 @@ Fügen Sie diesen Code in ein `<style>`-Tag am Ende Ihrer HTML-Datei ein, direkt
     height: auto;
   }
 </style>
-```
-
-Zusätzlich können wir versuchen, das spezifische Element zu identifizieren, das den Überlauf verursacht. Fügen Sie dieses kleine JavaScript-Snippet hinzu, um zu helfen, das Problem zu diagnostizieren:
-
-```html
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Findet Elemente, die breiter als der Viewport sind
-    function findOverflowingElements() {
-      const viewportWidth = window.innerWidth;
-      const allElements = document.querySelectorAll('*');
-      
-      allElements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        if (rect.width > viewportWidth) {
-          console.log('Überbreites Element gefunden:', element, 'Breite:', rect.width, 'Viewport-Breite:', viewportWidth);
-        }
-      });
-    }
-    
-    // Führt die Prüfung nach dem Laden und bei Größenänderungen durch
-    findOverflowingElements();
-    window.addEventListener('resize', findOverflowingElements);
-  });
-</script>
-```
-
-Dieses Script wird in der Browser-Konsole alle Elemente ausgeben, die breiter als der Viewport sind, was Ihnen helfen kann, das spezifische Problem zu identifizieren.
-
-Wenn Sie nach dem Hinzufügen dieser Fixes immer noch Probleme haben, könnte es hilfreich sein, die Konsole auf dem Android-Gerät zu überprüfen (über Remote-Debugging) oder Screenshots des Problems zu machen, um das genaue Verhalten besser zu verstehen.
-        
+     
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>UKNS: IT-Service &amp; Computer Reparatur in Leipzig | Ihr kompetenter Partner</title>
