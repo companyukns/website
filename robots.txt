@@ -1,4 +1,2 @@
 User-agent: *
 Sitemap: https://ukns.eu/sitemap.xml
-Disallow: /impressum/
-Disallow: /datenschutz/
