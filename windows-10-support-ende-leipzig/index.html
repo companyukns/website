@@ -6,6 +6,7 @@
 <title>Windows 10 Support Ende Leipzig | Sicher auf Windows 11 upgraden | UKNS</title>
 <meta content="Das Windows 10 Support-Ende naht. UKNS ist Ihr Partner in Leipzig für das sichere Upgrade auf Windows 11, auch bei inkompatibler Hardware oder ohne UEFI. Wir sichern Ihre Daten." name="description"/>
 <link href="https://ukns.eu/windows-10-support-ende-leipzig/" rel="canonical"/>
+<!-- Favicon Set -->
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -116,16 +117,43 @@
 <a aria-label="Startseite" class="menu-item text-gray-700 transition px-3 py-2" href="/"><i class="fas fa-home"></i></a>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-2"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-beratung-leipzig/"><i class="fas fa-lightbulb fa-fw mr-2"></i>Microsoft 365 Beratung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-einrichtung-leipzig/"><i class="fas fa-play-circle fa-fw mr-2"></i>Microsoft 365 Einrichtung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-migration-leipzig/"><i class="fas fa-exchange-alt fa-fw mr-2"></i>Microsoft 365 Migration</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/microsoft-365-support-leipzig/"><i class="fas fa-headset fa-fw mr-2"></i>Microsoft 365 Support</a>
+</div>
 </div>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-2"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2"></i>Endpoint Security</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/firma-firewall-schutzschild/"><i class="fas fa-fire-alt fa-fw mr-2"></i>Firewall-Schutz</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/ransomware-protection-leipzig/"><i class="fas fa-lock fa-fw mr-2"></i>Ransomware-Schutz</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/secure-email-leipzig/"><i class="fas fa-envelope-open-text fa-fw mr-2"></i>Sichere E-Mail</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/videoueberwachung-leipzig/"><i class="fas fa-video fa-fw mr-2"></i>Videoüberwachung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/virenschutz-leipzig/"> <i class="fas fa-shield-alt fa-fw mr-2"></i>Virenschutz</a>
+</div>
 </div>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-2"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2"></i>KI-Automatisierung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/ki-leipzig/"><i class="fas fa-brain fa-fw mr-2"></i>KI-Lösungen</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/firma-webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2"></i>Webdesign für Firmen</a>
+</div>
 </div>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-primary-blue transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-2"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2"></i>Backup-Lösungen</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2"></i>Datenrettung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2"></i>Netzwerkinstallation</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2"></i>Netzwerk-Optimierung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2"></i>Server-Datenrettung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2"></i>Server-Wartung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/virtualisierung-leipzig/"><i class="fas fa-cubes fa-fw mr-2"></i>Virtualisierung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2"></i>WLAN-Probleme</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-primary-blue font-bold" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2"></i>Windows 10 Support Ende</a>
 </div>
 </div>
@@ -147,6 +175,10 @@
 </button>
 <div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud fa-fw mr-2 opacity-70"></i>Alle Cloud-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/microsoft-365-beratung-leipzig/"><i class="fas fa-lightbulb fa-fw mr-2 opacity-70"></i>Microsoft 365 Beratung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/microsoft-365-einrichtung-leipzig/"><i class="fas fa-play-circle fa-fw mr-2 opacity-70"></i>Microsoft 365 Einrichtung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/microsoft-365-migration-leipzig/"><i class="fas fa-exchange-alt fa-fw mr-2 opacity-70"></i>Microsoft 365 Migration</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/microsoft-365-support-leipzig/"><i class="fas fa-headset fa-fw mr-2 opacity-70"></i>Microsoft 365 Support</a>
 </div>
 </div>
 <div x-data="{ open: false }">
@@ -156,6 +188,12 @@
 </button>
 <div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 opacity-70"></i>Alle Sicherheitslösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2 opacity-70"></i>Endpoint Security</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/firma-firewall-schutzschild/"><i class="fas fa-fire-alt fa-fw mr-2 opacity-70"></i>Firewall-Schutz</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ransomware-protection-leipzig/"><i class="fas fa-lock fa-fw mr-2 opacity-70"></i>Ransomware-Schutz</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/secure-email-leipzig/"><i class="fas fa-envelope-open-text fa-fw mr-2 opacity-70"></i>Sichere E-Mail</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/videoueberwachung-leipzig/"><i class="fas fa-video fa-fw mr-2 opacity-70"></i>Videoüberwachung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/virenschutz-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 opacity-70"></i>Virenschutz</a>
 </div>
 </div>
 <div x-data="{ open: false }">
@@ -165,6 +203,9 @@
 </button>
 <div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 opacity-70"></i>Alle Digital-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2 opacity-70"></i>KI-Automatisierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/ki-leipzig/"><i class="fas fa-brain fa-fw mr-2 opacity-70"></i>KI-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/firma-webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 opacity-70"></i>Webdesign für Firmen</a>
 </div>
 </div>
 <div x-data="{ open: true }">
@@ -174,6 +215,14 @@
 </button>
 <div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/serverloesungen-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Alle Serverlösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 opacity-70"></i>Backup-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2 opacity-70"></i>Datenrettung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2 opacity-70"></i>Netzwerkinstallation</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2 opacity-70"></i>Netzwerk-Optimierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Server-Datenrettung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2 opacity-70"></i>Server-Wartung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/virtualisierung-leipzig/"><i class="fas fa-cubes fa-fw mr-2 opacity-70"></i>Virtualisierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2 opacity-70"></i>WLAN-Probleme</a>
 <a class="block px-4 py-2 text-base bg-primary-blue font-bold transition" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2 opacity-70"></i>Windows 10 Support Ende</a>
 </div>
 </div>
@@ -329,12 +378,13 @@
 </div>
 <div class="bg-black/30 p-8 rounded-xl shadow-xl backdrop-blur-md" data-aos="fade-left">
 <h3 class="text-2xl font-semibold mb-6 text-primary-yellow">Jetzt Upgrade-Potenzial analysieren</h3>
-<form class="space-y-6">
+<form @submit.prevent=" submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }) .then(res => res.json()) .then(data => { responseMessage = data.message; responseStatus = data.status; if (data.status === 'success') { $event.target.reset(); } }) .catch(error => { responseMessage = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.'; responseStatus = 'error'; }) .finally(() => submitting = false) " class="space-y-6" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }">
+<div :class="{ 'bg-green-100 border-green-400 text-green-700': responseStatus === 'success', 'bg-red-100 border-red-400 text-red-700': responseStatus === 'error' }" class="border px-4 py-3 rounded relative" role="alert" x-show="responseMessage"><span class="block sm:inline" x-text="responseMessage"></span></div>
 <input type="hidden" name="form-subject" value="Anfrage zum Windows 10 Support-Ende">
 <div><label class="block text-sm font-medium text-gray-300 opacity-90" for="name">Vollständiger Name</label><input autocomplete="name" class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="name" name="name" placeholder="Max Mustermann" required="" type="text"/></div>
 <div><label class="block text-sm font-medium text-gray-300 opacity-90" for="phone">Telefonnummer</label><input autocomplete="tel" class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="phone" name="phone" placeholder="Ihre Telefonnummer für den Rückruf" required="" type="tel"/></div>
 <div><label class="block text-sm font-medium text-gray-300 opacity-90" for="message">Ihre Nachricht</label><textarea class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="message" name="message" placeholder="Wir benötigen eine Beratung bezüglich des Windows 10 Support-Endes für unsere ca. X Computer..." required="" rows="4"></textarea></div>
-<div><button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-primary-blue bg-primary-yellow hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-contact-section focus:ring-primary-yellow transition glow-button yellow-glow" type="submit">Beratung anfordern</button></div>
+<div><button :disabled="submitting" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-primary-blue bg-primary-yellow hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-contact-section focus:ring-primary-yellow transition glow-button yellow-glow disabled:opacity-50" type="submit"><span x-show="!submitting">Beratung anfordern</span><span x-show="submitting">Sende...</span></button></div>
 </form>
 </div>
 </div>
@@ -351,6 +401,13 @@
 <div class="border-t border-gray-700 pt-8 text-center text-sm opacity-80"><p>© <script>document.write(new Date().getFullYear())</script> UKNS IT-Premium Services Leipzig. Alle Rechte vorbehalten.</p></div>
 </div>
 </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ duration: 600, once: true, offset: 50 });
+            }
+        });
+    </script>
 <script defer="" src="/js/bundle.js"></script>
 </body>
 </html>
