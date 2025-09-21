@@ -70,6 +70,13 @@
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2"></i>WLAN-Probleme</a>
 </div>
 </div>
+<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
+<a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/it-support-leipzig/"><i class="fas fa-headset mr-2"></i>IT-Support <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2"></i>Windows 10: Was tun bei Support-Ende?</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/windows-11-upgrade-installation-leipzig/"><i class="fas fa-rocket fa-fw mr-2"></i>Windows 11: Upgrade & Installation</a>
+</div>
+</div>
 <a class="menu-item text-gray-700 transition px-3 py-2 inline-flex items-center" href="/it-wissen/"><i class="fas fa-book-open mr-2"></i>IT-Wissen</a>
 <a class="menu-item text-gray-700 transition px-3 py-2 inline-flex items-center" href="/preisliste/"><i class="fas fa-tags mr-2"></i>Preise</a>
 <a class="it-notfall-button ml-3 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition inline-flex items-center" href="tel:+4934124820174"><i class="fas fa-exclamation-triangle mr-2"></i>IT-Notfall</a>
@@ -138,6 +145,16 @@
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2 opacity-70"></i>WLAN-Probleme</a>
 </div>
 </div>
+<div x-data="{ open: false }">
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
+<span><i class="fas fa-headset fa-fw mr-3"></i>IT-Support</span>
+<i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
+</button>
+<div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2 opacity-70"></i>Windows 10: Was tun bei Support-Ende?</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/windows-11-upgrade-installation-leipzig/"><i class="fas fa-rocket fa-fw mr-2 opacity-70"></i>Windows 11: Upgrade & Installation</a>
+</div>
+</div>
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/it-wissen/"><i class="fas fa-book-open fa-fw mr-3"></i>IT-Wissen</a>
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/preisliste/"><i class="fas fa-tags fa-fw mr-3"></i>Preise</a>
 <div class="p-4">
@@ -170,6 +187,28 @@
 </a>
 </div>
 <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+<a class="block" href="/windows-10-support-ende-leipzig/">
+<img alt="Ein Kalenderblatt zeigt das End-Datum für den Windows 10 Support, daneben ein Computer" class="w-full h-48 object-cover" src="/images/windows-10-support-ende-leipzig-1200.jpg"/>
+<div class="p-6">
+<p class="text-sm text-primary-blue font-semibold mb-2">IT-Support & Sicherheit</p>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Windows 10 Support-Ende: Jetzt handeln!</h3>
+<p class="text-gray-600 text-sm mb-4">Der offizielle Support für Windows 10 endet. Erfahren Sie, warum ein rechtzeitiges Upgrade für Leipziger Unternehmen wichtig ist, um Sicherheitsrisiken zu vermeiden.</p>
+<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
+</div>
+</a>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+<a class="block" href="/windows-11-upgrade-installation-leipzig/">
+<img alt="Ein moderner Laptop mit Windows 11, der den reibungslosen Umstieg symbolisiert" class="w-full h-48 object-cover" src="/images/windows-11-upgrade-leipzig-1200.jpg"/>
+<div class="p-6">
+<p class="text-sm text-primary-blue font-semibold mb-2">IT-Support & Upgrade</p>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Nahtloses Upgrade: Sicher auf Windows 11 umsteigen</h3>
+<p class="text-gray-600 text-sm mb-4">Windows 11 bietet mehr Sicherheit und moderne Funktionen. Wir sorgen für einen reibungslosen Umstieg für Ihr Unternehmen in Leipzig – von der Planung bis zur Installation.</p>
+<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
+</div>
+</a>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
 <a class="block" href="/it-fuer-immobilienfirmen-leipzig/">
 <img alt="Immobilienmakler arbeitet mobil mit einem Tablet" class="w-full h-48 object-cover" src="/images/it-fuer-immobilienfirmen-leipzig.jpg"/>
 <div class="p-6">
@@ -184,7 +223,7 @@
 <a class="block" href="/webdesign-leipzig/">
 <img alt="Moderne Website auf einem Laptop, die professionelles Webdesign symbolisiert" class="w-full h-48 object-cover" src="/images/webdesign-leipzig-ukns-1200.jpg"/>
 <div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Digital &amp; Web</p>
+<p class="text-sm text-primary-blue font-semibold mb-2">Digital & Web</p>
 <h3 class="text-xl font-bold text-gray-900 mb-3">Professionelles Webdesign, das für Sie arbeitet</h3>
 <p class="text-gray-600 text-sm mb-4">Ihre Website ist Ihr digitaler Vertriebsmitarbeiter. Wir sorgen dafür, dass sie nicht nur gut aussieht, sondern auch schnell, sicher und zuverlässig ist.</p>
 <span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
@@ -195,26 +234,12 @@
 <a class="block" href="/cloud-loesungen-leipzig/">
 <img alt="Abstrakte Darstellung einer Cloud-Infrastruktur" class="w-full h-48 object-cover" src="/images/cloud-loesungen-leipzig-1200.jpg"/>
 <div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Cloud &amp; Infrastruktur</p>
+<p class="text-sm text-primary-blue font-semibold mb-2">Cloud & Infrastruktur</p>
 <h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Lösungen: Ihr Weg in die digitale Zukunft</h3>
 <p class="text-gray-600 text-sm mb-4">Machen Sie Ihr Unternehmen agiler, sicherer und wettbewerbsfähiger mit einer maßgeschneiderten Cloud-Strategie für Ihre Ziele.</p>
 <span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
 </div>
 </a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/datenrettung-festplatte-leipzig/">
-<img alt="Geöffnete Festplatte in einem Datenrettungslabor" class="w-full h-48 object-cover" src="/images/datenrettung-festplatte-leipzig-1200.jpg"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Daten &amp; Sicherheit</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Datenrettung bei Festplattendefekt: Was jetzt zu tun ist</h3>
-<p class="text-gray-600 text-sm mb-4">Festplatte klackert oder wird nicht erkannt? Handeln Sie richtig. Wir erklären die Schritte zur professionellen Datenrettung von HDD &amp; SSD.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-gray-200 rounded-lg shadow-lg p-6 flex items-center justify-center">
-<p class="text-gray-500 text-center">Weitere spannende Artikel und Analysen folgen in Kürze.</p>
 </div>
 </div>
 </div>
