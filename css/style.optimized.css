@@ -740,3 +740,34 @@ input, select, textarea {
   color: #0F172A !important;
   background-color: #FFFFFF !important;
 }
+
+
+/* ==========================================================================
+   ULTRA-LEGIBLE FORM LABELS & INPUT CONTRAST FIX
+   ========================================================================== */
+
+label {
+  color: #0F172A !important;
+  font-size: 0.9375rem !important; /* 15px */
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  border: 2px solid #CBD5E1 !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #F5A623 !important;
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.25) !important;
+  background-color: #FFFFFF !important;
+}

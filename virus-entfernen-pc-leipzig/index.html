@@ -474,7 +474,7 @@
 
               <!-- 21st.dev Phone Input Field -->
               <div class="relative group">
-                <label for="analyse-phone" class="block text-xs font-extrabold text-slate-800 uppercase tracking-wider mb-1.5 flex items-center">
+                <label for="analyse-phone" class="block text-sm sm:text-base font-black text-slate-950 uppercase tracking-wider mb-2 flex items-center">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block mr-2"></span>
                   Telefonnummer für den Rückruf *
                 </label>
@@ -482,14 +482,14 @@
                   <div class="absolute left-4 pointer-events-none text-slate-400 group-focus-within:text-amber-500 transition-colors">
                     <i class="fas fa-phone-alt text-sm"></i>
                   </div>
-                  <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-13 pl-11 pr-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm font-semibold placeholder-slate-400 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
+                  <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-13 pl-11 pr-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm font-semibold placeholder-slate-500 font-medium focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
                   <input type="hidden" name="telefon" :value="phone"/>
                 </div>
               </div>
 
               <!-- 21st.dev Name Input Field -->
               <div class="relative group">
-                <label for="analyse-name" class="block text-xs font-extrabold text-slate-800 uppercase tracking-wider mb-1.5 flex items-center">
+                <label for="analyse-name" class="block text-sm sm:text-base font-black text-slate-950 uppercase tracking-wider mb-2 flex items-center">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block mr-2"></span>
                   Ihr Name / Ansprechpartner *
                 </label>
@@ -497,7 +497,7 @@
                   <div class="absolute left-4 pointer-events-none text-slate-400 group-focus-within:text-amber-500 transition-colors">
                     <i class="fas fa-user text-sm"></i>
                   </div>
-                  <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-13 pl-11 pr-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm font-semibold placeholder-slate-400 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
+                  <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-13 pl-11 pr-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm font-semibold placeholder-slate-500 font-medium focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
                 </div>
               </div>
 
@@ -559,18 +559,18 @@
 
               <div>
                 <label for="analyse-name" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Ihr Name / Ansprechpartner *</label>
-                <input type="text" id="analyse-name" name="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="text" id="analyse-name" name="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-500 font-medium font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
               </div>
 
               <div>
                 <label for="analyse-phone" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Telefonnummer für Rückruf *</label>
-                <input type="tel" id="analyse-phone" name="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="tel" id="analyse-phone" name="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-500 font-medium font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
                 <input type="hidden" name="telefon" value=""/>
               </div>
 
               <div>
                 <label for="analyse-firma" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Firma / Thema (optional)</label>
-                <input type="text" id="analyse-firma" name="company_or_topic" placeholder="z. B. Muster GmbH / IT-Sicherheit &amp; Cloud" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="text" id="analyse-firma" name="company_or_topic" placeholder="z. B. Muster GmbH / IT-Sicherheit &amp; Cloud" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-500 font-medium font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
                 <input type="hidden" name="message" value="Rückrufwunsch 15-Minuten Gratis-Analyse"/>
               </div>
 
