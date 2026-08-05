@@ -595,3 +595,80 @@ article:hover, .article-card:hover {
   border-color: #2563EB !important;
   box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12) !important;
 }
+
+
+/* ==========================================================================
+   21st.dev & LUXURY B2B EXECUTIVE FRAMING & SPACING SYSTEM
+   ========================================================================== */
+
+/* 5cm Side Margins & Generous Whitespace Container */
+.max-w-7xl, .max-w-6xl {
+  max-width: 1140px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 1280px) {
+  .max-w-7xl, .max-w-6xl, body > main {
+    padding-left: 4.5rem !important;  /* ~5cm Luxus-Seitenabstand */
+    padding-right: 4.5rem !important; /* ~5cm Luxus-Seitenabstand */
+  }
+}
+
+/* Edler Innenabstand (Generous Internal Padding) */
+section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 6.5rem !important;
+    padding-bottom: 6.5rem !important;
+  }
+}
+
+/* 21st.dev Glass Bento-Cards & Container Overhaul */
+.service-card-item, .benefit-card, .accent-box, .blue-accent-box, article, .article-card {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  border-radius: 1.75rem !important; /* 28px Eckenabrundung */
+  padding: 2.25rem !important;       /* Edler Innenabstand */
+  box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@media (min-width: 768px) {
+  .service-card-item, .benefit-card, .accent-box, .blue-accent-box, article, .article-card {
+    padding: 2.75rem !important;    /* Edler großer Innenabstand */
+  }
+}
+
+.service-card-item:hover, .benefit-card:hover, article:hover, .article-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  border-color: rgba(245, 166, 35, 0.6) !important; /* Edler Gold-Akzent Border */
+  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.14), 0 0 25px rgba(245, 166, 35, 0.15) !important;
+}
+
+/* 21st.dev Radial Background Lighting */
+.gradient-bg {
+  background: radial-gradient(circle at 50% 0%, #1E293B 0%, #0F172A 75%) !important;
+}
+
+/* Edler Golden High-Impact Button */
+.glow-button, button[type="submit"].bg-gradient-to-r {
+  background: linear-gradient(135deg, #F5A623 0%, #D97706 100%) !important;
+  color: #0F172A !important;
+  font-weight: 900 !important;
+  padding: 1.125rem 2.25rem !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 12px 30px -5px rgba(245, 166, 35, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glow-button:hover, button[type="submit"].bg-gradient-to-r:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 20px 45px -5px rgba(245, 166, 35, 0.6) !important;
+}
