@@ -523,3 +523,75 @@ footer a {
 footer a:hover {
   color: #F5A623 !important;
 }
+
+
+/* ==========================================================================
+   SENIOR UX / UI UTILITY & PADDING MASTER FIX
+   ========================================================================== */
+
+/* Background Color Utilities */
+.bg-slate-50, .bg-gray-50 { background-color: #F8FAFC !important; }
+.bg-slate-100, .bg-gray-100 { background-color: #F1F5F9 !important; }
+.bg-slate-800 { background-color: #1E293B !important; }
+.bg-slate-900 { background-color: #0F172A !important; }
+.bg-blue-50 { background-color: #EFF6FF !important; }
+.bg-blue-100 { background-color: #DBEAFE !important; }
+.bg-amber-50 { background-color: #FFFBEB !important; }
+.bg-amber-100 { background-color: #FEF3C7 !important; }
+.bg-emerald-50 { background-color: #ECFDF5 !important; }
+.bg-emerald-100 { background-color: #D1FAE5 !important; }
+
+/* Text Color Utilities */
+.text-slate-900, .text-gray-900 { color: #0F172A !important; }
+.text-slate-800, .text-gray-800 { color: #1E293B !important; }
+.text-slate-700, .text-gray-700 { color: #334155 !important; }
+.text-slate-600, .text-gray-600 { color: #475569 !important; }
+.text-slate-500, .text-gray-500 { color: #64748B !important; }
+.text-slate-400, .text-gray-400 { color: #94A3B8 !important; }
+.text-blue-600 { color: #2563EB !important; }
+.text-blue-800 { color: #1E40AF !important; }
+
+/* Padding & Spacing Utilities (Ensures text never sticks to box edges!) */
+.p-4 { padding: 1rem !important; }
+.p-5 { padding: 1.25rem !important; }
+.p-6 { padding: 1.5rem !important; }
+.p-7 { padding: 1.75rem !important; }
+.p-8 { padding: 2rem !important; }
+.p-10 { padding: 2.5rem !important; }
+.p-12 { padding: 3rem !important; }
+.px-4 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.px-6 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.px-7 { padding-left: 1.75rem !important; padding-right: 1.75rem !important; }
+.px-8 { padding-left: 2rem !important; padding-right: 2rem !important; }
+.py-4 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+.py-6 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py-12 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+.py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+.py-20 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+.py-24 { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+.mb-3 { margin-bottom: 0.75rem !important; }
+.mb-4 { margin-bottom: 1rem !important; }
+.mb-6 { margin-bottom: 1.5rem !important; }
+.mb-8 { margin-bottom: 2rem !important; }
+.gap-8 { gap: 2rem !important; }
+
+/* Border Radius Utilities */
+.rounded-xl { border-radius: 0.875rem !important; }
+.rounded-2xl { border-radius: 1.25rem !important; }
+.rounded-3xl { border-radius: 1.75rem !important; }
+
+/* Card & Article Box Styling */
+article, .article-card {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06) !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+article:hover, .article-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: #2563EB !important;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12) !important;
+}
