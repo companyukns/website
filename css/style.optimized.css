@@ -287,3 +287,120 @@ footer ul {
 footer li {
   margin: 0;
 }
+
+
+/* ==========================================================================
+   UKNS EXECUTIVE B2B DESIGN SYSTEM UPGRADE
+   Senior Graphic Designer & Corporate Excellence Aesthetics
+   ========================================================================== */
+
+:root {
+  --primary-blue: #0F172A;       /* Executive Navy Obsidian */
+  --primary-accent: #2563EB;     /* Electric Sapphire Blue */
+  --primary-yellow: #F5A623;     /* Refined Amber Gold */
+  --light-blue: #1E293B;         /* Slate Obsidian Secondary */
+  --dark-gray: #0F172A;          /* High contrast obsidian text */
+  --light-gray: #F8FAFC;         /* Soft porcelain slate background */
+  --contact-bg: #0F172A;         /* Rich Obsidian contact section */
+  --card-border: rgba(226, 232, 240, 0.9);
+}
+
+/* Glassmorphic Navigation Bar */
+header.bg-white {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--card-border) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Dropdown Menu Glass Styling */
+header nav .hidden.md\:flex > div.dropdown-container > div[x-show="open"] {
+  background-color: #0F172A !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.4) !important;
+  padding: 0.75rem 0 !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+header nav .hidden.md\:flex > div.dropdown-container > div[x-show="open"] a.dropdown-item {
+  color: #F8FAFC !important;
+  font-weight: 500 !important;
+  padding: 0.625rem 1.25rem !important;
+  border-radius: 0.5rem !important;
+  margin: 0 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+header nav .hidden.md\:flex > div.dropdown-container > div[x-show="open"] a.dropdown-item:hover {
+  background-color: rgba(37, 99, 235, 0.25) !important;
+  color: #F5A623 !important;
+  transform: translateX(6px) !important;
+}
+
+/* High-Impact Executive Gradients */
+.gradient-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+  position: relative;
+}
+
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15), transparent 50%);
+  pointer-events: none;
+}
+
+/* Service Cards & Containers Elevation */
+.service-card-item, .benefit-card, .accent-box, .blue-accent-box {
+  background: #FFFFFF !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.service-card-item:hover, .benefit-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Premium Glow Buttons & High-Contrast CTAs */
+.glow-button, .bg-primary-yellow {
+  background: linear-gradient(135deg, #F5A623 0%, #D97706 100%) !important;
+  color: #0F172A !important;
+  font-weight: 800 !important;
+  border-radius: 0.875rem !important;
+  box-shadow: 0 8px 25px -5px rgba(245, 166, 35, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glow-button:hover, .bg-primary-yellow:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #F5A623 100%) !important;
+  color: #0F172A !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px -5px rgba(245, 166, 35, 0.5) !important;
+}
+
+/* Contact Section Styling */
+.bg-contact-section {
+  background: linear-gradient(180deg, #0F172A 0%, #0B132B 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* General Typography Enhancements */
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: #334155 !important;
+  background-color: #F8FAFC !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Outfit', 'Montserrat', sans-serif !important;
+  color: #0F172A !important;
+  letter-spacing: -0.02em !important;
+}
