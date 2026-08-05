@@ -404,3 +404,122 @@ h1, h2, h3, h4, h5, h6 {
   color: #0F172A !important;
   letter-spacing: -0.02em !important;
 }
+
+
+/* ==========================================================================
+   SENIOR UX / UI DESIGNER EXECUTIVE MASTER OVERHAUL
+   ========================================================================== */
+
+/* Smooth Scrolling & Universal Anti-Aliasing */
+html {
+  scroll-behavior: smooth !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: #334155 !important;
+  background-color: #F8FAFC !important;
+  line-height: 1.65 !important;
+}
+
+/* Headings Crisp Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Outfit', 'Montserrat', sans-serif !important;
+  color: #0F172A !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 800 !important;
+}
+
+/* Sticky Header UX & Glassmorphism */
+header.bg-white {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 4px 25px -5px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* IT-Notfall Pulse Animation */
+.it-notfall-button {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%) !important;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.it-notfall-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.45) !important;
+}
+
+/* Interactive Card UX */
+.service-card-item, .benefit-card, .accent-box, .blue-accent-box, .service-detail-section {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.service-card-item:hover, .benefit-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: rgba(37, 99, 235, 0.4) !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Form UX & Input States */
+input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  border: 2px solid #E2E8F0 !important;
+  border-radius: 0.875rem !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15) !important;
+  outline: none !important;
+}
+
+/* Senior Designer Golden CTA Button */
+.glow-button, button[type="submit"].bg-gradient-to-r {
+  background: linear-gradient(135deg, #F5A623 0%, #D97706 100%) !important;
+  color: #0F172A !important;
+  font-weight: 900 !important;
+  border-radius: 0.875rem !important;
+  box-shadow: 0 10px 25px -5px rgba(245, 166, 35, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  letter-spacing: 0.01em !important;
+}
+
+.glow-button:hover, button[type="submit"].bg-gradient-to-r:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #F5A623 100%) !important;
+  color: #0F172A !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 35px -5px rgba(245, 166, 35, 0.55) !important;
+}
+
+/* Deep Obsidian Footer UX */
+footer, .bg-contact-section {
+  background: linear-gradient(180deg, #0F172A 0%, #080D1A 100%) !important;
+  color: #94A3B8 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer h3, footer h4, .bg-contact-section h2, .bg-contact-section h3 {
+  color: #FFFFFF !important;
+}
+
+footer a {
+  color: #CBD5E1 !important;
+  transition: color 0.2s ease !important;
+}
+
+footer a:hover {
+  color: #F5A623 !important;
+}
