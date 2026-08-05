@@ -400,164 +400,126 @@
 <!-- ## SENIOR DESIGNER B2B CALLBACK & 15-MINUTEN GRATIS-ANALYSE ## -->
 
 <!-- ## SENIOR UX DESIGNER 2-STEP INTERACTIVE CALLBACK FUNNEL ## -->
-<section class="py-16 md:py-20 bg-slate-100 border-t border-b border-slate-200/80 scroll-mt-custom" id="gratis-analyse-rueckruf">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden">
+
+<!-- ## COMPACT ELEGANT EXECUTIVE CALLBACK CARD (SENIOR B2B DESIGN) ## -->
+<section class="py-12 md:py-16 bg-slate-50 border-t border-b border-slate-200/60 scroll-mt-custom" id="gratis-analyse-rueckruf">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden transform hover:shadow-2xl transition-all duration-300">
       
-      <!-- Accent Top Bar -->
-      <div class="h-2.5 bg-gradient-to-r from-slate-900 via-blue-600 to-amber-400"></div>
+      <!-- Top Elegant Gold-Navy Accent Line -->
+      <div class="h-2 bg-gradient-to-r from-slate-900 via-amber-400 to-slate-900"></div>
 
-      <div class="p-6 sm:p-10 md:p-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" x-data="{ step: 1, selectedTopic: 'IT-Sicherheit &amp; Cloud', name: '', phone: '', submitting: false, responseMessage: '', responseStatus: '' }">
-          
-          <!-- Left Column: Executive Value & Trust Badges -->
-          <div class="lg:col-span-5 space-y-6">
-            <div class="inline-flex items-center bg-blue-50 border border-blue-200 text-blue-900 font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full shadow-sm">
-              <i class="fas fa-bolt mr-2 text-amber-500"></i>Schnell-Rückruf in max. 15 Min.
-            </div>
-
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight">
-              Kostenlose 15-Minuten IT-Analyse
-            </h2>
-
-            <p class="text-slate-600 text-base leading-relaxed font-medium">
-              Wählen Sie einfach kurz Ihr Thema aus. Ein Leipziger IT-Spezialist von UKNS prüft Ihre Wünsche und ruft Sie <strong class="text-slate-900 font-bold underline decoration-amber-400 decoration-4">direkt persönlich zurück</strong>.
-            </p>
-
-            <!-- Trust Feature List -->
-            <div class="space-y-3 pt-2">
-              <div class="flex items-center space-x-3 text-slate-800 font-bold text-sm">
-                <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-check text-xs"></i>
-                </div>
-                <span>100% Kostenlos &amp; ohne Verkaufsdruck</span>
-              </div>
-              <div class="flex items-center space-x-3 text-slate-800 font-bold text-sm">
-                <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-check text-xs"></i>
-                </div>
-                <span>Konkrete Experten-Tipps für Ihre IT</span>
-              </div>
-              <div class="flex items-center space-x-3 text-slate-800 font-bold text-sm">
-                <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-shield-alt text-xs"></i>
-                </div>
-                <span>DSGVO-sicher &amp; vertraulich</span>
-              </div>
-            </div>
-
-            <!-- Rating Micro-Badge -->
-            <div class="pt-4 border-t border-slate-100 flex items-center space-x-4 text-xs font-semibold text-slate-500">
-              <div class="flex text-amber-400 text-sm">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <span><strong>4.9 / 5.0</strong> Kundenzufriedenheit in Leipzig</span>
-            </div>
-          </div>
-
-          <!-- Right Column: Senior UX 2-Step Micro-Funnel Form -->
-          <div class="lg:col-span-7 bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl">
-            
-            <!-- Step Progress Indicator -->
-            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-200/80">
-              <div class="flex items-center space-x-3">
-                <span class="w-7 h-7 rounded-full bg-slate-900 text-white font-extrabold text-xs flex items-center justify-center" x-text="step"></span>
-                <span class="text-sm font-extrabold text-slate-900" x-text="step === 1 ? 'Schritt 1: Thema wählen' : 'Schritt 2: Rückruf-Nummer'"></span>
-              </div>
-              <div class="flex space-x-1.5">
-                <div class="w-8 h-2 rounded-full transition-all duration-300" :class="step >= 1 ? 'bg-amber-400' : 'bg-slate-200'"></div>
-                <div class="w-8 h-2 rounded-full transition-all duration-300" :class="step >= 2 ? 'bg-amber-400' : 'bg-slate-200'"></div>
-              </div>
-            </div>
-
-            <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); step = 1; } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; step = 1; }).finally(() => submitting = false)" class="space-y-5">
-
-              <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
-                <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-3 text-2xl"></i>
-                <span x-text="responseMessage"></span>
-              </div>
-
-              <input type="hidden" name="subject" value="15-Minuten Gratis-Analyse Rückruf-Anfrage"/>
-              <input type="hidden" name="anfrage_typ" value="15-Minuten-Gratis-Analyse-Rueckruf"/>
-              <input type="hidden" name="thema" :value="selectedTopic"/>
-              <input type="hidden" name="message" :value="'Rückrufwunsch 15-Minuten Gratis-Analyse für Thema: ' + selectedTopic"/>
-
-              <!-- STEP 1: Quick Topic Selection (1-Click Pills) -->
-              <div x-show="step === 1" class="space-y-4" x-transition:enter="transition ease-out duration-200">
-                <label class="block text-sm font-extrabold text-slate-800 tracking-wide">Worum geht es bei Ihnen hauptsächlich?</label>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <button type="button" @click="selectedTopic = 'IT-Sicherheits-Check &amp; Firewall'; step = 2" :class="selectedTopic === 'IT-Sicherheits-Check &amp; Firewall' ? 'border-amber-400 bg-white shadow-md text-slate-900' : 'border-slate-200 bg-white/80 text-slate-700 hover:border-slate-300'" class="p-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center space-x-3 cursor-pointer">
-                    <span class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-lg flex-shrink-0"><i class="fas fa-shield-alt"></i></span>
-                    <span class="text-sm font-bold">IT-Sicherheit &amp; Firewall</span>
-                  </button>
-
-                  <button type="button" @click="selectedTopic = 'Microsoft 365 &amp; Cloud Migration'; step = 2" :class="selectedTopic === 'Microsoft 365 &amp; Cloud Migration' ? 'border-amber-400 bg-white shadow-md text-slate-900' : 'border-slate-200 bg-white/80 text-slate-700 hover:border-slate-300'" class="p-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center space-x-3 cursor-pointer">
-                    <span class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-lg flex-shrink-0"><i class="fas fa-cloud"></i></span>
-                    <span class="text-sm font-bold">Cloud &amp; Microsoft 365</span>
-                  </button>
-
-                  <button type="button" @click="selectedTopic = 'Netzwerk &amp; Server-Wartung'; step = 2" :class="selectedTopic === 'Netzwerk &amp; Server-Wartung' ? 'border-amber-400 bg-white shadow-md text-slate-900' : 'border-slate-200 bg-white/80 text-slate-700 hover:border-slate-300'" class="p-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center space-x-3 cursor-pointer">
-                    <span class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg flex-shrink-0"><i class="fas fa-server"></i></span>
-                    <span class="text-sm font-bold">Netzwerk &amp; Server</span>
-                  </button>
-
-                  <button type="button" @click="selectedTopic = 'PC, Mac &amp; Support Notfall'; step = 2" :class="selectedTopic === 'PC, Mac &amp; Support Notfall' ? 'border-amber-400 bg-white shadow-md text-slate-900' : 'border-slate-200 bg-white/80 text-slate-700 hover:border-slate-300'" class="p-4 rounded-xl border-2 text-left transition-all duration-200 flex items-center space-x-3 cursor-pointer">
-                    <span class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg flex-shrink-0"><i class="fas fa-desktop"></i></span>
-                    <span class="text-sm font-bold">PC / Mac &amp; Notfall-Hilfe</span>
-                  </button>
-                </div>
-
-                <div class="pt-2 flex justify-end">
-                  <button type="button" @click="step = 2" class="text-sm font-bold text-blue-700 hover:text-blue-900 inline-flex items-center cursor-pointer">
-                    Weiter zu Schritt 2 <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- STEP 2: Fast Contact Entry -->
-              <div x-show="step === 2" class="space-y-4" x-transition:enter="transition ease-out duration-200">
-                
-                <div class="bg-blue-50/70 border border-blue-200 rounded-xl p-3 flex items-center justify-between text-xs font-bold text-blue-900 mb-2">
-                  <span class="flex items-center"><i class="fas fa-tag mr-2 text-amber-500"></i>Thema: <span x-text="selectedTopic" class="ml-1"></span></span>
-                  <button type="button" @click="step = 1" class="text-blue-700 underline hover:text-blue-900 font-semibold cursor-pointer">Ändern</button>
-                </div>
-
-                <div>
-                  <label for="analyse-phone" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Telefonnummer für den Rückruf *</label>
-                  <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
-                  <input type="hidden" name="telefon" :value="phone"/>
-                </div>
-
-                <div>
-                  <label for="analyse-name" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Ihr Name / Ansprechpartner *</label>
-                  <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
-                </div>
-
-                <div class="pt-2">
-                  <button type="submit" :disabled="submitting" class="w-full h-16 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black text-lg tracking-wide rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center border-b-4 border-amber-500 cursor-pointer">
-                    <i class="fas fa-phone-alt mr-3 text-xl"></i>
-                    <span x-show="!submitting">Jetzt 15-Min. Analyse anfordern</span>
-                    <span x-show="submitting">Wird übermittelt...</span>
-                  </button>
-                </div>
-
-                <div class="flex items-center justify-between text-xs text-slate-500 font-semibold pt-1">
-                  <button type="button" @click="step = 1" class="text-slate-600 hover:text-slate-900 font-bold inline-flex items-center cursor-pointer">
-                    <i class="fas fa-arrow-left mr-1.5 text-xs"></i> Zurück zu Schritt 1
-                  </button>
-                  <span class="flex items-center"><i class="fas fa-lock mr-1 text-slate-400"></i>100% DSGVO-sicher</span>
-                </div>
-              </div>
-
-            </form>
-          </div>
-
+      <div class="p-6 sm:p-10 md:p-12" x-data="{ step: 1, selectedTopic: 'IT-Sicherheit &amp; Cloud', name: '', phone: '', submitting: false, responseMessage: '', responseStatus: '' }">
+        
+        <!-- Header: Compact & High Impact -->
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="bg-amber-100 text-amber-900 border border-amber-300 font-extrabold text-xs uppercase px-4 py-1.5 rounded-full inline-flex items-center shadow-sm mb-3">
+            <i class="fas fa-bolt mr-2 text-amber-600"></i>Gratis Rückruf in max. 15 Minuten
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+            Kostenlose 15-Minuten IT-Analyse
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base font-medium">
+            Wählen Sie kurz Ihr Thema. Ein Leipziger IT-Spezialist ruft Sie <strong class="text-slate-900 font-bold underline decoration-amber-400">direkt persönlich zurück</strong>.
+          </p>
         </div>
+
+        <!-- Compact Interactive 2-Step Form -->
+        <div class="max-w-2xl mx-auto bg-slate-50/90 rounded-2xl p-6 border border-slate-200/90 shadow-inner">
+          
+          <!-- Progress Indicator -->
+          <div class="flex items-center justify-between mb-5 pb-3 border-b border-slate-200/80 text-xs font-extrabold text-slate-800">
+            <span class="flex items-center">
+              <span class="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center mr-2 text-xs" x-text="step"></span>
+              <span x-text="step === 1 ? 'Schritt 1: Thema wählen' : 'Schritt 2: Telefonnummer eingeben'"></span>
+            </span>
+            <div class="flex space-x-1">
+              <div class="w-6 h-1.5 rounded-full transition-all" :class="step >= 1 ? 'bg-amber-400' : 'bg-slate-200'"></div>
+              <div class="w-6 h-1.5 rounded-full transition-all" :class="step >= 2 ? 'bg-amber-400' : 'bg-slate-200'"></div>
+            </div>
+          </div>
+
+          <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); step = 1; } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; step = 1; }).finally(() => submitting = false)" class="space-y-4">
+
+            <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-4 py-3 rounded-xl text-sm font-bold flex items-center shadow-md">
+              <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-2.5 text-xl"></i>
+              <span x-text="responseMessage"></span>
+            </div>
+
+            <input type="hidden" name="subject" value="15-Minuten Gratis-Analyse Rückruf-Anfrage"/>
+            <input type="hidden" name="anfrage_typ" value="15-Minuten-Gratis-Analyse-Rueckruf"/>
+            <input type="hidden" name="thema" :value="selectedTopic"/>
+            <input type="hidden" name="message" :value="'Rückrufwunsch 15-Minuten Gratis-Analyse für Thema: ' + selectedTopic"/>
+
+            <!-- STEP 1: Compact Pills -->
+            <div x-show="step === 1" class="space-y-3" x-transition:enter="transition ease-out duration-200">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <button type="button" @click="selectedTopic = 'IT-Sicherheit &amp; Firewall'; step = 2" class="p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:border-amber-400 text-left transition flex items-center space-x-3 cursor-pointer shadow-sm">
+                  <span class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-base flex-shrink-0"><i class="fas fa-shield-alt"></i></span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">IT-Sicherheit &amp; Firewall</span>
+                </button>
+
+                <button type="button" @click="selectedTopic = 'Microsoft 365 &amp; Cloud'; step = 2" class="p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:border-amber-400 text-left transition flex items-center space-x-3 cursor-pointer shadow-sm">
+                  <span class="w-9 h-9 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-base flex-shrink-0"><i class="fas fa-cloud"></i></span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">Cloud &amp; Microsoft 365</span>
+                </button>
+
+                <button type="button" @click="selectedTopic = 'Netzwerk &amp; Server-Wartung'; step = 2" class="p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:border-amber-400 text-left transition flex items-center space-x-3 cursor-pointer shadow-sm">
+                  <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base flex-shrink-0"><i class="fas fa-server"></i></span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">Netzwerk &amp; Server</span>
+                </button>
+
+                <button type="button" @click="selectedTopic = 'PC, Mac &amp; Notfall-Hilfe'; step = 2" class="p-3.5 rounded-xl border-2 border-slate-200 bg-white hover:border-amber-400 text-left transition flex items-center space-x-3 cursor-pointer shadow-sm">
+                  <span class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-base flex-shrink-0"><i class="fas fa-desktop"></i></span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-900">PC / Mac &amp; Notfall-Hilfe</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Fast Contact Entry -->
+            <div x-show="step === 2" class="space-y-3.5" x-transition:enter="transition ease-out duration-200">
+              <div class="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 flex items-center justify-between text-xs font-bold text-amber-900">
+                <span>Thema: <span x-text="selectedTopic"></span></span>
+                <button type="button" @click="step = 1" class="text-blue-700 underline font-semibold cursor-pointer">Ändern</button>
+              </div>
+
+              <div>
+                <label for="analyse-phone" class="block text-xs font-extrabold text-slate-800 tracking-wide mb-1">Telefonnummer für den Rückruf *</label>
+                <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-12 px-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="telefon" :value="phone"/>
+              </div>
+
+              <div>
+                <label for="analyse-name" class="block text-xs font-extrabold text-slate-800 tracking-wide mb-1">Ihr Name / Ansprechpartner *</label>
+                <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-12 px-4 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-sm placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+              </div>
+
+              <div class="pt-1">
+                <button type="submit" :disabled="submitting" class="w-full h-14 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black text-base tracking-wide rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center border-b-4 border-amber-500 cursor-pointer">
+                  <i class="fas fa-phone-alt mr-2 text-lg"></i>
+                  <span x-show="!submitting">Jetzt Rückruf anfordern</span>
+                  <span x-show="submitting">Wird übermittelt...</span>
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Trust Seals Footer -->
+        <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-500">
+          <span><i class="fas fa-shield-alt text-slate-400 mr-1"></i>100% Unverbindlich</span>
+          <span>•</span>
+          <span><i class="fas fa-lock text-slate-400 mr-1"></i>DSGVO Konform</span>
+          <span>•</span>
+          <span><i class="fas fa-star text-amber-400 mr-1"></i>4.9 / 5.0 Sterne</span>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
 
 
 
