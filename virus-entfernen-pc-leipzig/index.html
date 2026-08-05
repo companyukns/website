@@ -339,47 +339,49 @@
 
 <!-- ## COMPACT ELEGANT EXECUTIVE CALLBACK CARD (21ST.DEV DESIGN) ## -->
 <!-- ## 21ST.DEV EXECUTIVE CALLBACK CARD (SENIOR B2B DESIGN) ## -->
-<section class="py-16 md:py-20 bg-slate-50 border-t border-b border-slate-200/60 scroll-mt-custom" id="gratis-analyse-rueckruf">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6">
-    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden transform hover:shadow-2xl transition-all duration-300">
+<!-- ## DEEP NAVY BLUE EXECUTIVE CALLBACK CARD (21ST.DEV LUXURY B2B DESIGN) ## -->
+<section class="py-16 md:py-20 bg-slate-900 border-t border-b border-slate-800 scroll-mt-custom relative overflow-hidden" id="gratis-analyse-rueckruf">
+  <div class="network-bg"></div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="bg-gradient-to-br from-slate-900 via-slate-800/95 to-slate-900 rounded-3xl shadow-2xl border border-slate-700/80 overflow-hidden backdrop-blur-xl">
       
-      <!-- Top Gold-Navy Accent Line -->
-      <div class="h-2 bg-gradient-to-r from-slate-900 via-amber-400 to-slate-900"></div>
+      <!-- Top Elegant Gold-Navy Accent Line -->
+      <div class="h-2 bg-gradient-to-r from-blue-600 via-amber-400 to-blue-600"></div>
 
-      <div class="p-6 sm:p-10 md:p-12" x-data="{ step: 1, selectedTopic: 'IT-Sicherheit &amp; Cloud', name: '', phone: '', company: '', submitting: false, responseMessage: '', responseStatus: '' }">
+      <div class="p-6 sm:p-10 md:p-12 text-white" x-data="{ step: 1, selectedTopic: 'IT-Sicherheit &amp; Cloud', name: '', phone: '', company: '', submitting: false, responseMessage: '', responseStatus: '' }">
         
-        <!-- Header: Compact & High Impact -->
+        <!-- Header: High-Contrast & High Impact -->
         <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="bg-amber-100 text-amber-900 border border-amber-300 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-flex items-center shadow-sm mb-3">
-            <i class="fas fa-bolt mr-2 text-amber-600"></i>Gratis Rückruf in max. 15 Minuten
+          <span class="bg-amber-400/20 text-amber-300 border border-amber-400/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-flex items-center shadow-md mb-4 backdrop-blur-md">
+            <i class="fas fa-bolt mr-2 text-amber-400"></i>Gratis Rückruf in max. 15 Minuten
           </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mb-3">
             Kostenlose 15-Minuten IT-Analyse
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base font-medium">
-            Wählen Sie kurz Ihr Thema. Ein Leipziger IT-Spezialist ruft Sie <strong class="text-slate-900 font-bold underline decoration-amber-400">direkt persönlich zurück</strong>.
+          <p class="text-slate-300 text-sm sm:text-base font-medium">
+            Wählen Sie kurz Ihr Thema. Ein Leipziger IT-Spezialist ruft Sie <strong class="text-amber-400 font-bold underline decoration-amber-400">direkt persönlich zurück</strong>.
           </p>
         </div>
 
         <!-- 21st.dev Interactive 2-Step Form Card -->
-        <div class="max-w-2xl mx-auto bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-inner">
+        <div class="max-w-2xl mx-auto bg-slate-800/90 rounded-2xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl backdrop-blur-md">
           
           <!-- Progress Indicator -->
-          <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200/80 text-xs font-extrabold text-slate-800">
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-700/80 text-xs font-extrabold text-slate-200">
             <span class="flex items-center">
-              <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center mr-2.5 text-xs font-bold" x-text="step"></span>
+              <span class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center mr-2.5 text-xs font-black" x-text="step"></span>
               <span x-text="step === 1 ? 'Schritt 1: Thema wählen' : 'Schritt 2: Kontaktdaten eingeben'"></span>
             </span>
             <div class="flex space-x-2">
-              <div class="w-8 h-2 rounded-full transition-all" :class="step >= 1 ? 'bg-amber-400' : 'bg-slate-200'"></div>
-              <div class="w-8 h-2 rounded-full transition-all" :class="step >= 2 ? 'bg-amber-400' : 'bg-slate-200'"></div>
+              <div class="w-8 h-2 rounded-full transition-all" :class="step >= 1 ? 'bg-amber-400' : 'bg-slate-700'"></div>
+              <div class="w-8 h-2 rounded-full transition-all" :class="step >= 2 ? 'bg-amber-400' : 'bg-slate-700'"></div>
             </div>
           </div>
 
           <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); step = 1; } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; step = 1; }).finally(() => submitting = false)" class="space-y-6">
 
-            <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-4 py-3.5 rounded-xl text-sm font-bold flex items-center shadow-md">
-              <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-3 text-xl"></i>
+            <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-900/90 border-red-500 text-white' : 'bg-emerald-900/90 border-emerald-400 text-white'" class="border-2 px-4 py-3.5 rounded-xl text-sm font-bold flex items-center shadow-lg">
+              <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-400' : 'fa-check-circle text-emerald-400'" class="fas mr-3 text-xl"></i>
               <span x-text="responseMessage"></span>
             </div>
 
@@ -391,38 +393,38 @@
             <!-- STEP 1: Interactive Pills -->
             <div x-show="step === 1" class="space-y-4" x-transition:enter="transition ease-out duration-200">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <button type="button" @click="selectedTopic = 'IT-Sicherheit &amp; Firewall'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-amber-400 hover:shadow-lg text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-sm group">
-                  <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-shield-alt"></i></span>
-                  <span class="text-sm sm:text-base font-bold text-slate-900">IT-Sicherheit &amp; Firewall</span>
+                <button type="button" @click="selectedTopic = 'IT-Sicherheit &amp; Firewall'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-700 bg-slate-900/80 hover:border-amber-400 hover:shadow-xl text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-md group">
+                  <span class="w-10 h-10 rounded-xl bg-amber-400/20 text-amber-400 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-shield-alt"></i></span>
+                  <span class="text-sm sm:text-base font-bold text-white">IT-Sicherheit &amp; Firewall</span>
                 </button>
 
-                <button type="button" @click="selectedTopic = 'Microsoft 365 &amp; Cloud'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-amber-400 hover:shadow-lg text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-sm group">
-                  <span class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-cloud"></i></span>
-                  <span class="text-sm sm:text-base font-bold text-slate-900">Cloud &amp; Microsoft 365</span>
+                <button type="button" @click="selectedTopic = 'Microsoft 365 &amp; Cloud'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-700 bg-slate-900/80 hover:border-amber-400 hover:shadow-xl text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-md group">
+                  <span class="w-10 h-10 rounded-xl bg-blue-400/20 text-blue-400 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-cloud"></i></span>
+                  <span class="text-sm sm:text-base font-bold text-white">Cloud &amp; Microsoft 365</span>
                 </button>
 
-                <button type="button" @click="selectedTopic = 'Netzwerk &amp; Server-Wartung'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-amber-400 hover:shadow-lg text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-sm group">
-                  <span class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-server"></i></span>
-                  <span class="text-sm sm:text-base font-bold text-slate-900">Netzwerk &amp; Server</span>
+                <button type="button" @click="selectedTopic = 'Netzwerk &amp; Server-Wartung'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-700 bg-slate-900/80 hover:border-amber-400 hover:shadow-xl text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-md group">
+                  <span class="w-10 h-10 rounded-xl bg-indigo-400/20 text-indigo-400 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-server"></i></span>
+                  <span class="text-sm sm:text-base font-bold text-white">Netzwerk &amp; Server</span>
                 </button>
 
-                <button type="button" @click="selectedTopic = 'PC, Mac &amp; Notfall-Hilfe'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-amber-400 hover:shadow-lg text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-sm group">
-                  <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-desktop"></i></span>
-                  <span class="text-sm sm:text-base font-bold text-slate-900">PC / Mac &amp; Notfall-Hilfe</span>
+                <button type="button" @click="selectedTopic = 'PC, Mac &amp; Notfall-Hilfe'; step = 2" class="p-4 sm:p-5 rounded-2xl border-2 border-slate-700 bg-slate-900/80 hover:border-amber-400 hover:shadow-xl text-left transition-all duration-200 flex items-center space-x-4 cursor-pointer shadow-md group">
+                  <span class="w-10 h-10 rounded-xl bg-emerald-400/20 text-emerald-400 group-hover:bg-amber-400 group-hover:text-slate-950 flex items-center justify-center text-lg flex-shrink-0 transition-colors"><i class="fas fa-desktop"></i></span>
+                  <span class="text-sm sm:text-base font-bold text-white">PC / Mac &amp; Notfall-Hilfe</span>
                 </button>
               </div>
             </div>
 
             <!-- STEP 2: 21st.dev Spacious Form Inputs (24px Gap) -->
             <div x-show="step === 2" class="space-y-6" x-transition:enter="transition ease-out duration-200">
-              <div class="bg-amber-50 border border-amber-300 rounded-xl px-4 py-3 flex items-center justify-between text-sm font-bold text-amber-950 shadow-sm">
-                <span class="flex items-center"><i class="fas fa-check-circle mr-2.5 text-amber-600 text-base"></i>Thema: <span x-text="selectedTopic" class="ml-1.5 text-slate-900"></span></span>
-                <button type="button" @click="step = 1" class="text-blue-700 underline font-bold hover:text-blue-900 cursor-pointer">Ändern</button>
+              <div class="bg-slate-900/90 border border-amber-400/50 rounded-xl px-4 py-3 flex items-center justify-between text-sm font-bold text-amber-300 shadow-md">
+                <span class="flex items-center"><i class="fas fa-check-circle mr-2.5 text-amber-400 text-base"></i>Thema: <span x-text="selectedTopic" class="ml-1.5 text-white"></span></span>
+                <button type="button" @click="step = 1" class="text-amber-400 underline font-bold hover:text-amber-300 cursor-pointer">Ändern</button>
               </div>
 
               <!-- Name Field -->
               <div class="space-y-2">
-                <label for="analyse-name" class="block text-sm sm:text-base font-extrabold text-slate-900 flex items-center">
+                <label for="analyse-name" class="block text-sm sm:text-base font-extrabold text-white flex items-center">
                   <span class="w-2 h-2 rounded-full bg-amber-400 inline-block mr-2.5 shadow-sm"></span>
                   Ihr Name / Ansprechpartner *
                 </label>
@@ -430,13 +432,13 @@
                   <div class="absolute left-4.5 pointer-events-none text-slate-400 group-focus-within:text-amber-500 transition-colors text-base">
                     <i class="fas fa-user"></i>
                   </div>
-                  <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-200 rounded-2xl text-slate-900 text-base font-semibold placeholder-slate-400 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
+                  <input type="text" id="analyse-name" name="name" x-model="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-300 rounded-2xl text-slate-950 text-base font-bold placeholder-slate-500 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/30 focus:bg-white shadow-md transition-all duration-200 outline-none"/>
                 </div>
               </div>
 
               <!-- Phone Field -->
               <div class="space-y-2">
-                <label for="analyse-phone" class="block text-sm sm:text-base font-extrabold text-slate-900 flex items-center">
+                <label for="analyse-phone" class="block text-sm sm:text-base font-extrabold text-white flex items-center">
                   <span class="w-2 h-2 rounded-full bg-amber-400 inline-block mr-2.5 shadow-sm"></span>
                   Telefonnummer für den Rückruf *
                 </label>
@@ -444,22 +446,22 @@
                   <div class="absolute left-4.5 pointer-events-none text-slate-400 group-focus-within:text-amber-500 transition-colors text-base">
                     <i class="fas fa-phone-alt"></i>
                   </div>
-                  <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-200 rounded-2xl text-slate-900 text-base font-semibold placeholder-slate-400 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
+                  <input type="tel" id="analyse-phone" name="phone" x-model="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-300 rounded-2xl text-slate-950 text-base font-bold placeholder-slate-500 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/30 focus:bg-white shadow-md transition-all duration-200 outline-none"/>
                   <input type="hidden" name="telefon" :value="phone"/>
                 </div>
               </div>
 
               <!-- Company / Topic Field (Optional) -->
               <div class="space-y-2">
-                <label for="analyse-company" class="block text-sm sm:text-base font-extrabold text-slate-900 flex items-center">
-                  <span class="w-2 h-2 rounded-full bg-slate-300 inline-block mr-2.5"></span>
-                  Firma / Thema <span class="text-slate-500 font-normal text-xs ml-1.5">(Optional)</span>
+                <label for="analyse-company" class="block text-sm sm:text-base font-extrabold text-white flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-500 inline-block mr-2.5"></span>
+                  Firma / Thema <span class="text-slate-400 font-normal text-xs ml-1.5">(Optional)</span>
                 </label>
                 <div class="relative flex items-center group">
                   <div class="absolute left-4.5 pointer-events-none text-slate-400 group-focus-within:text-amber-500 transition-colors text-base">
                     <i class="fas fa-building"></i>
                   </div>
-                  <input type="text" id="analyse-company" name="company_or_topic" x-model="company" placeholder="z. B. Mustermann GmbH oder Cloud Migration" class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-200 rounded-2xl text-slate-900 text-base font-semibold placeholder-slate-400 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/20 focus:bg-white shadow-sm transition-all duration-200 outline-none"/>
+                  <input type="text" id="analyse-company" name="company_or_topic" x-model="company" placeholder="z. B. Mustermann GmbH oder Cloud Migration" class="w-full h-14 pl-12 pr-4 bg-white border-2 border-slate-300 rounded-2xl text-slate-950 text-base font-bold placeholder-slate-500 focus:border-amber-400 focus:ring-4 focus:ring-amber-400/30 focus:bg-white shadow-md transition-all duration-200 outline-none"/>
                 </div>
               </div>
 
@@ -476,10 +478,10 @@
         </div>
 
         <!-- Trust Seals Footer -->
-        <div class="mt-8 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-bold text-slate-500">
-          <span><i class="fas fa-shield-alt text-slate-400 mr-1.5"></i>100% Unverbindlich</span>
+        <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-bold text-slate-400">
+          <span><i class="fas fa-shield-alt text-amber-400 mr-1.5"></i>100% Unverbindlich</span>
           <span>•</span>
-          <span><i class="fas fa-lock text-slate-400 mr-1.5"></i>DSGVO Konform</span>
+          <span><i class="fas fa-lock text-amber-400 mr-1.5"></i>DSGVO Konform</span>
           <span>•</span>
           <span><i class="fas fa-star text-amber-400 mr-1.5"></i>4.9 / 5.0 Sterne</span>
         </div>
