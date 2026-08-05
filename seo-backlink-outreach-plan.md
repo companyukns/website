@@ -30,7 +30,7 @@ Diese Einträge sind keine "magischen Backlinks", aber wichtig für lokale SEO, 
 
 Name: UKNS IT-Premium Services  
 Adresse: Friedrich-Ebert-Straße 85, 04109 Leipzig  
-Telefon: +49 341 24820174  
+Telefon: +49 341   
 Website: https://ukns.eu/  
 Kategorie: IT-Service, IT-Dienstleister, IT-Beratung, Computerservice
 
@@ -86,7 +86,7 @@ Vielleicht ist die Ressource für Ihre Mitglieder / Ihr Netzwerk hilfreich. Wenn
 Viele Grüße  
 [Name]  
 UKNS IT-Premium Services  
-0341 24820174  
+0341   
 https://ukns.eu/
 
 ## Outreach-Vorlage 2: Partner / Kunde / Dienstleister
