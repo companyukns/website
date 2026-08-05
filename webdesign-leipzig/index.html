@@ -396,13 +396,14 @@
 
           <!-- Right Column: Premium Form Card -->
           <div class="lg:col-span-6 bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-lg">
-            <form @submit.prevent="submitting = true; responseMessage = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = 'Vielen Dank! Wir rufen Sie umgehend zurück.'; $event.target.reset(); }).catch(() => { responseMessage = 'Vielen Dank! Ihre Anfrage wurde übermittelt.'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '' }" class="space-y-5">
+            <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }" class="space-y-5">
               
-              <div x-show="responseMessage" class="bg-emerald-50 border-2 border-emerald-500 text-emerald-900 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
-                <i class="fas fa-check-circle mr-3 text-emerald-600 text-2xl"></i>
+              <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
+                <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-3 text-2xl"></i>
                 <span x-text="responseMessage"></span>
               </div>
 
+              <input type="hidden" name="subject" value="15-Minuten Gratis-Analyse Rückruf-Anfrage"/>
               <input type="hidden" name="anfrage_typ" value="15-Minuten-Gratis-Analyse-Rueckruf"/>
 
               <div>
@@ -413,11 +414,13 @@
               <div>
                 <label for="analyse-phone" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Telefonnummer für Rückruf *</label>
                 <input type="tel" id="analyse-phone" name="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="telefon" value=""/>
               </div>
 
               <div>
                 <label for="analyse-firma" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Firma / Thema (optional)</label>
                 <input type="text" id="analyse-firma" name="company_or_topic" placeholder="z. B. Muster GmbH / IT-Sicherheit &amp; Cloud" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="message" value="Rückrufwunsch 15-Minuten Gratis-Analyse"/>
               </div>
 
               <div class="pt-2">

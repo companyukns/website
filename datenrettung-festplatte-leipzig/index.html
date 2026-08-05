@@ -389,13 +389,14 @@
 
           <!-- Right Column: Premium Form Card -->
           <div class="lg:col-span-6 bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-lg">
-            <form @submit.prevent="submitting = true; responseMessage = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = 'Vielen Dank! Wir rufen Sie umgehend zurück.'; $event.target.reset(); }).catch(() => { responseMessage = 'Vielen Dank! Ihre Anfrage wurde übermittelt.'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '' }" class="space-y-5">
+            <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }" class="space-y-5">
               
-              <div x-show="responseMessage" class="bg-emerald-50 border-2 border-emerald-500 text-emerald-900 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
-                <i class="fas fa-check-circle mr-3 text-emerald-600 text-2xl"></i>
+              <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
+                <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-3 text-2xl"></i>
                 <span x-text="responseMessage"></span>
               </div>
 
+              <input type="hidden" name="subject" value="15-Minuten Gratis-Analyse Rückruf-Anfrage"/>
               <input type="hidden" name="anfrage_typ" value="15-Minuten-Gratis-Analyse-Rueckruf"/>
 
               <div>
@@ -406,11 +407,13 @@
               <div>
                 <label for="analyse-phone" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Telefonnummer für Rückruf *</label>
                 <input type="tel" id="analyse-phone" name="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="telefon" value=""/>
               </div>
 
               <div>
                 <label for="analyse-firma" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Firma / Thema (optional)</label>
                 <input type="text" id="analyse-firma" name="company_or_topic" placeholder="z. B. Muster GmbH / IT-Sicherheit &amp; Cloud" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="message" value="Rückrufwunsch 15-Minuten Gratis-Analyse"/>
               </div>
 
               <div class="pt-2">
@@ -479,29 +482,49 @@
                 </div>
                 <div class="bg-black/30 p-8 rounded-xl shadow-xl backdrop-blur-md" data-aos="fade-left">
                     <h3 class="text-2xl font-semibold mb-6 text-primary-yellow">Anfrage zur Datenrettung Ihrer Festplatte</h3>
-                    <form @submit.prevent=" submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }) .then(res => res.json()) .then(data => { responseMessage = data.message; responseStatus = data.status; if (data.status === 'success') { $event.target.reset(); } }) .catch(() => { responseMessage = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.'; responseStatus = 'error'; }) .finally(() => submitting = false) " class="space-y-6" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }">
-                        <div :class="{ 'bg-green-100 border-green-400 text-green-700': responseStatus === 'success', 'bg-red-100 border-red-400 text-red-700': responseStatus === 'error' }" class="border px-4 py-3 rounded relative" role="alert" x-show="responseMessage">
-                            <span class="block sm:inline" x-text="responseMessage"></span>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 opacity-90" for="name">Vollständiger Name</label>
-                            <input autocomplete="name" class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="name" name="name" placeholder="Max Mustermann" required type="text"/>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 opacity-90" for="phone">Telefonnummer für Rückfragen</label>
-                            <input autocomplete="tel" class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="phone" name="phone" placeholder="Ihre Telefonnummer" required type="tel"/>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 opacity-90" for="message">Kurze Problembeschreibung</label>
-                            <textarea class="mt-1 block w-full px-4 py-3 bg-white/10 border border-white/40 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-yellow focus:border-primary-yellow sm:text-sm text-white placeholder-gray-400 transition" id="message" name="message" placeholder="z.B. Externe Festplatte (Seagate, 2TB) ist heruntergefallen und klackert..." required rows="4"></textarea>
-                        </div>
-                        <div>
-                            <button :disabled="submitting" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-primary-blue bg-primary-yellow hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-contact-section focus:ring-primary-yellow transition glow-button yellow-glow disabled:opacity-50" type="submit">
-                                <span x-show="!submitting">Kostenlose Analyse anfordern</span>
-                                <span x-show="submitting">Sende...</span>
-                            </button>
-                        </div>
-                    </form>
+                    <form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }" class="space-y-5">
+              
+              <div x-show="responseMessage" :class="responseStatus === 'error' ? 'bg-red-50 border-red-500 text-red-900' : 'bg-emerald-50 border-emerald-500 text-emerald-900'" class="border-2 px-5 py-4 rounded-xl text-base font-bold flex items-center shadow-md">
+                <i :class="responseStatus === 'error' ? 'fa-exclamation-circle text-red-600' : 'fa-check-circle text-emerald-600'" class="fas mr-3 text-2xl"></i>
+                <span x-text="responseMessage"></span>
+              </div>
+
+              <input type="hidden" name="subject" value="15-Minuten Gratis-Analyse Rückruf-Anfrage"/>
+              <input type="hidden" name="anfrage_typ" value="15-Minuten-Gratis-Analyse-Rueckruf"/>
+
+              <div>
+                <label for="analyse-name" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Ihr Name / Ansprechpartner *</label>
+                <input type="text" id="analyse-name" name="name" required placeholder="z. B. Max Mustermann" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+              </div>
+
+              <div>
+                <label for="analyse-phone" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Telefonnummer für Rückruf *</label>
+                <input type="tel" id="analyse-phone" name="phone" required placeholder="z. B. 0176 12345678 oder 0341..." class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="telefon" value=""/>
+              </div>
+
+              <div>
+                <label for="analyse-firma" class="block text-sm font-extrabold text-slate-800 tracking-wide mb-1.5">Firma / Thema (optional)</label>
+                <input type="text" id="analyse-firma" name="company_or_topic" placeholder="z. B. Muster GmbH / IT-Sicherheit &amp; Cloud" class="w-full h-14 px-5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 text-base placeholder-slate-400 font-medium focus:border-blue-600 focus:bg-white shadow-sm transition outline-none"/>
+                <input type="hidden" name="message" value="Rückrufwunsch 15-Minuten Gratis-Analyse"/>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" :disabled="submitting" class="w-full h-16 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black text-lg tracking-wide rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center border-b-4 border-amber-500 cursor-pointer">
+                  <i class="fas fa-phone-alt mr-3 text-xl"></i>
+                  <span x-show="!submitting">Gratis-Analyse anfordern &amp; Rückruf erhalten</span>
+                  <span x-show="submitting">Wird übermittelt...</span>
+                </button>
+              </div>
+
+              <div class="flex items-center justify-center space-x-4 text-xs font-semibold text-slate-500 pt-1">
+                <span><i class="fas fa-shield-alt mr-1 text-slate-400"></i>256-Bit SSL</span>
+                <span>•</span>
+                <span><i class="fas fa-user-shield mr-1 text-slate-400"></i>DSGVO Konform</span>
+                <span>•</span>
+                <span><i class="fas fa-bolt mr-1 text-amber-500"></i>Sofort-Rückruf</span>
+              </div>
+            </form>
                 </div>
             </div>
         </div>
