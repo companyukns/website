@@ -648,7 +648,7 @@ def page_html(topic: PageTopic) -> str:
             "@type": "LocalBusiness",
             "name": "UKNS IT-Premium Services",
             "url": SITE_URL,
-            "telephone": "+4934124820174",
+            "telephone": "",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Friedrich-Ebert-Straße 85",
