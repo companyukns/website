@@ -879,3 +879,47 @@ header .hidden.md\:flex, .main-header .hidden.md\:flex {
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
 }
+
+
+/* ==========================================================================
+   UNIFORM SENIOR UI/UX HERO BACKGROUND SYSTEM (FULL-WIDTH OBSIDIAN GRADIENT)
+   ========================================================================== */
+
+/* Remove pt-16 gap from main so hero sits flush against header */
+main {
+  padding-top: 0 !important;
+}
+
+/* Master Hero Section Background (Full-Bleed 100% Width) */
+.gradient-bg, hero, section[id^="hero"], .hero-section {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+  color: #FFFFFF !important;
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.gradient-bg h1, hero h1, section[id^="hero"] h1, .hero-section h1 {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.gradient-bg p, hero p, section[id^="hero"] p, .hero-section p {
+  color: #E2E8F0 !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+.gradient-bg .text-primary-yellow, hero .text-primary-yellow, section[id^="hero"] .text-primary-yellow {
+  color: #F5A623 !important;
+  font-weight: 800 !important;
+}
+
+/* Subtle Glowing Network Radial Overlay */
+.network-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.15) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
