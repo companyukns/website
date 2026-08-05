@@ -1,0 +1,679 @@
+{
+  "generated_at": "2026-06-01",
+  "pages": 100,
+  "b2b_pages": 50,
+  "b2c_pages": 50,
+  "urls": [
+    "/microsoft-365-backup-leipzig/",
+    "/microsoft-intune-leipzig/",
+    "/entra-id-mfa-conditional-access-leipzig/",
+    "/it-monitoring-leipzig/",
+    "/patch-management-leipzig/",
+    "/nis2-beratung-leipzig/",
+    "/vpn-homeoffice-sicherheit-leipzig/",
+    "/voip-teams-telefonie-leipzig/",
+    "/it-dokumentation-asset-management-leipzig/",
+    "/it-sicherheitsaudit-leipzig/",
+    "/edr-xdr-leipzig/",
+    "/managed-antivirus-leipzig/",
+    "/serverraum-wartung-leipzig/",
+    "/wlan-ausleuchtung-leipzig/",
+    "/sharepoint-beratung-leipzig/",
+    "/teams-einrichtung-leipzig/",
+    "/email-archivierung-leipzig/",
+    "/spamfilter-leipzig/",
+    "/it-onboarding-offboarding-leipzig/",
+    "/passwortmanager-firmen-leipzig/",
+    "/firewall-wartung-leipzig/",
+    "/vpn-einrichtung-firma-leipzig/",
+    "/mobile-device-management-leipzig/",
+    "/azure-cloud-beratung-leipzig/",
+    "/cloud-backup-leipzig/",
+    "/server-migration-leipzig/",
+    "/domain-dns-management-leipzig/",
+    "/office-arbeitsplatz-einrichten-leipzig/",
+    "/pc-rollout-firma-leipzig/",
+    "/it-inventarisierung-leipzig/",
+    "/lizenzmanagement-leipzig/",
+    "/datenschutz-it-technik-leipzig/",
+    "/zero-trust-beratung-leipzig/",
+    "/penetrationstest-vorbereitung-leipzig/",
+    "/security-awareness-schulung-leipzig/",
+    "/phishing-simulation-leipzig/",
+    "/backup-restore-test-leipzig/",
+    "/disaster-recovery-plan-leipzig/",
+    "/business-continuity-it-leipzig/",
+    "/nas-einrichtung-firma-leipzig/",
+    "/netzwerk-segmentierung-leipzig/",
+    "/bitlocker-verschluesselung-leipzig/",
+    "/remote-desktop-sicherheit-leipzig/",
+    "/filialvernetzung-leipzig/",
+    "/wlan-gastnetz-leipzig/",
+    "/drucker-management-firma-leipzig/",
+    "/it-helpdesk-outsourcing-leipzig/",
+    "/exchange-online-migration-leipzig/",
+    "/microsoft-defender-beratung-leipzig/",
+    "/proaktive-it-wartung-leipzig/",
+    "/pc-hilfe-leipzig/",
+    "/computerhilfe-leipzig/",
+    "/pc-support-fernwartung-leipzig/",
+    "/pc-langsam-leipzig/",
+    "/laptop-langsam-leipzig/",
+    "/windows-fehler-beheben-leipzig/",
+    "/windows-neuinstallation-leipzig/",
+    "/windows-setup-hilfe-leipzig/",
+    "/windows-update-probleme-leipzig/",
+    "/outlook-hilfe-leipzig/",
+    "/email-einrichten-leipzig/",
+    "/thunderbird-hilfe-leipzig/",
+    "/drucker-einrichten-leipzig/",
+    "/druckerprobleme-leipzig/",
+    "/wlan-router-einrichten-leipzig/",
+    "/internet-langsam-leipzig/",
+    "/smartphone-mit-pc-verbinden-leipzig/",
+    "/datensicherung-privat-leipzig/",
+    "/fotos-sichern-leipzig/",
+    "/externe-festplatte-hilfe-leipzig/",
+    "/usb-stick-datenrettung-leipzig/",
+    "/sd-karte-datenrettung-leipzig/",
+    "/virus-entfernung-privat-leipzig/",
+    "/malware-entfernung-leipzig/",
+    "/phishing-hilfe-privat-leipzig/",
+    "/passwort-hilfe-leipzig/",
+    "/microsoft-office-hilfe-leipzig/",
+    "/excel-hilfe-leipzig/",
+    "/word-hilfe-leipzig/",
+    "/powerpoint-hilfe-leipzig/",
+    "/mac-hilfe-leipzig/",
+    "/macbook-hilfe-leipzig/",
+    "/imac-hilfe-leipzig/",
+    "/iphone-backup-hilfe-leipzig/",
+    "/android-hilfe-leipzig/",
+    "/tablet-hilfe-leipzig/",
+    "/senioren-computerhilfe-leipzig/",
+    "/computerkurs-leipzig/",
+    "/pc-einrichtung-zuhause-leipzig/",
+    "/laptop-einrichtung-leipzig/",
+    "/gaming-pc-hilfe-leipzig/",
+    "/pc-aufruesten-leipzig/",
+    "/ssd-upgrade-leipzig/",
+    "/ram-aufruestung-leipzig/",
+    "/bios-uefi-hilfe-leipzig/",
+    "/bluescreen-hilfe-leipzig/",
+    "/browser-probleme-leipzig/",
+    "/chrome-firefox-hilfe-leipzig/",
+    "/zoom-teams-hilfe-privat-leipzig/",
+    "/smart-home-wlan-hilfe-leipzig/"
+  ],
+  "hub_pages": [
+    "/it-wissen/firmenkunden-it-dienstleistungen.html",
+    "/it-wissen/privatkunden-computerhilfe-themen.html"
+  ],
+  "detail_images": 600,
+  "total_generated_images": 1200,
+  "ai_image_sets": [
+    "ai-b2b-backup-continuity",
+    "ai-b2b-managed-operations",
+    "ai-b2b-microsoft-cloud",
+    "ai-b2b-network-infrastructure",
+    "ai-b2b-security",
+    "ai-b2b-workplace-devices",
+    "ai-b2c-computer-help",
+    "ai-b2c-data-security",
+    "ai-b2c-email-office",
+    "ai-b2c-mobile-apple",
+    "ai-b2c-printer-wifi",
+    "ai-b2c-windows-performance",
+    "it-dokumentation-asset-management-leipzig-ai-detail"
+  ],
+  "ai_image_pages": 100,
+  "ai_image_mapping_counts": {
+    "ai-b2b-microsoft-cloud": 8,
+    "ai-b2b-workplace-devices": 9,
+    "ai-b2b-security": 15,
+    "ai-b2b-managed-operations": 6,
+    "it-dokumentation-asset-management-leipzig-ai-detail": 1,
+    "ai-b2b-network-infrastructure": 6,
+    "ai-b2b-backup-continuity": 5,
+    "ai-b2c-computer-help": 7,
+    "ai-b2c-windows-performance": 12,
+    "ai-b2c-email-office": 10,
+    "ai-b2c-printer-wifi": 5,
+    "ai-b2c-mobile-apple": 7,
+    "ai-b2c-data-security": 9
+  },
+  "ai_image_files": 78,
+  "lifestyle_image_sets": [
+    "ai-lifestyle-b2b-cloud-workplace",
+    "ai-lifestyle-b2b-managed-it",
+    "ai-lifestyle-b2b-security",
+    "ai-lifestyle-b2c-computer-help",
+    "ai-lifestyle-b2c-data-backup",
+    "ai-lifestyle-b2c-mobile-devices",
+    "druckerprobleme-leipzig-lifestyle"
+  ],
+  "lifestyle_image_pages": [
+    {
+      "page": "/microsoft-365-backup-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/microsoft-intune-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/entra-id-mfa-conditional-access-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-monitoring-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/patch-management-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/nis2-beratung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/vpn-homeoffice-sicherheit-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/voip-teams-telefonie-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-dokumentation-asset-management-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-sicherheitsaudit-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/edr-xdr-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/managed-antivirus-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/serverraum-wartung-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/wlan-ausleuchtung-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/sharepoint-beratung-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/teams-einrichtung-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/email-archivierung-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/spamfilter-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-onboarding-offboarding-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/passwortmanager-firmen-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/firewall-wartung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/vpn-einrichtung-firma-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/mobile-device-management-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/azure-cloud-beratung-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/cloud-backup-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/server-migration-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/domain-dns-management-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/office-arbeitsplatz-einrichten-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-rollout-firma-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-inventarisierung-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/lizenzmanagement-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/datenschutz-it-technik-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/zero-trust-beratung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/penetrationstest-vorbereitung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/security-awareness-schulung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/phishing-simulation-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/backup-restore-test-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/disaster-recovery-plan-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/business-continuity-it-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/nas-einrichtung-firma-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/netzwerk-segmentierung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/bitlocker-verschluesselung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/remote-desktop-sicherheit-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/filialvernetzung-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/wlan-gastnetz-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/drucker-management-firma-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/it-helpdesk-outsourcing-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/exchange-online-migration-leipzig/",
+      "stem": "ai-lifestyle-b2b-cloud-workplace",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/microsoft-defender-beratung-leipzig/",
+      "stem": "ai-lifestyle-b2b-security",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/proaktive-it-wartung-leipzig/",
+      "stem": "ai-lifestyle-b2b-managed-it",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/computerhilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-support-fernwartung-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-langsam-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/laptop-langsam-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/windows-fehler-beheben-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/windows-neuinstallation-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/windows-setup-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/windows-update-probleme-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/outlook-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/email-einrichten-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/thunderbird-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/drucker-einrichten-leipzig/",
+      "stem": "druckerprobleme-leipzig-lifestyle",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/druckerprobleme-leipzig/",
+      "stem": "druckerprobleme-leipzig-lifestyle",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/wlan-router-einrichten-leipzig/",
+      "stem": "druckerprobleme-leipzig-lifestyle",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/internet-langsam-leipzig/",
+      "stem": "druckerprobleme-leipzig-lifestyle",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/smartphone-mit-pc-verbinden-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/datensicherung-privat-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/fotos-sichern-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/externe-festplatte-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/usb-stick-datenrettung-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/sd-karte-datenrettung-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/virus-entfernung-privat-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/malware-entfernung-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/phishing-hilfe-privat-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/passwort-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-data-backup",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/microsoft-office-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/excel-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/word-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/powerpoint-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/mac-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/macbook-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/imac-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/iphone-backup-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/android-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/tablet-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-mobile-devices",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/senioren-computerhilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/computerkurs-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-einrichtung-zuhause-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/laptop-einrichtung-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/gaming-pc-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/pc-aufruesten-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/ssd-upgrade-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/ram-aufruestung-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/bios-uefi-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/bluescreen-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/browser-probleme-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/chrome-firefox-hilfe-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/zoom-teams-hilfe-privat-leipzig/",
+      "stem": "ai-lifestyle-b2c-computer-help",
+      "type": "ai_lifestyle_inline"
+    },
+    {
+      "page": "/smart-home-wlan-hilfe-leipzig/",
+      "stem": "druckerprobleme-leipzig-lifestyle",
+      "type": "ai_lifestyle_inline"
+    }
+  ],
+  "lifestyle_image_mapping_counts": {
+    "ai-lifestyle-b2b-cloud-workplace": 8,
+    "ai-lifestyle-b2b-managed-it": 27,
+    "ai-lifestyle-b2b-security": 15,
+    "ai-lifestyle-b2c-computer-help": 29,
+    "druckerprobleme-leipzig-lifestyle": 5,
+    "ai-lifestyle-b2c-mobile-devices": 7,
+    "ai-lifestyle-b2c-data-backup": 9
+  },
+  "lifestyle_image_files": 42,
+  "all_generated_image_files": 1320,
+  "lifestyle_images_updated_at": "2026-06-01",
+  "humanized_audit": {
+    "checked_pages": 100,
+    "min_words": 580,
+    "avg_words": 603.7,
+    "max_words": 642,
+    "faq_per_page": 3,
+    "ai_image_pages": 100,
+    "issues_after_update": 0,
+    "checked_at": "2026-06-01"
+  }
+}
