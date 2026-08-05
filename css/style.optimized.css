@@ -856,3 +856,26 @@ input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
   border-color: #F5A623 !important;
   box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.25) !important;
 }
+
+
+/* ==========================================================================
+   SENIOR UI/UX MASTER HEADER: ALWAYS 1 SINGLE LINE & OBSIDIAN GLASS BG
+   ========================================================================== */
+
+header, .main-header {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.95) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(245, 166, 35, 0.25) !important;
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.5) !important;
+}
+
+header nav > div, .main-header nav > div {
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
+
+header .hidden.md\:flex, .main-header .hidden.md\:flex {
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+}
