@@ -799,3 +799,60 @@ input:focus, textarea:focus, select:focus {
 .nav-dropdown:focus-within .sub-menu {
   display: block !important;
 }
+
+
+/* ==========================================================================
+   SENIOR EXECUTIVE B2B REDESIGN SYSTEM (21ST.DEV GLASS HEADER & FORM SPACING)
+   ========================================================================== */
+
+/* Reset forced body padding to restore fluid full-bleed sections */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #F8FAFC !important;
+}
+
+@media (min-width: 1280px) {
+  body > main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Executive Dark Obsidian Glass Header */
+header, .main-header {
+  background: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.4) !important;
+}
+
+header a.menu-item, .main-header a.menu-item {
+  color: #F8FAFC !important;
+  font-weight: 700 !important;
+}
+
+header a.menu-item:hover, .main-header a.menu-item:hover {
+  color: #F5A623 !important;
+}
+
+/* Generous 21st.dev Form Input Spacing & High-Contrast Design */
+.space-y-6 > * + * {
+  margin-top: 1.5rem !important; /* 24px vertical spacing between inputs */
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+  height: 3.5rem !important; /* 56px height */
+  border-radius: 1rem !important; /* 16px rounded */
+  border: 2px solid #CBD5E1 !important;
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+  border-color: #F5A623 !important;
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.25) !important;
+}
