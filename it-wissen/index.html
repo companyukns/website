@@ -1,73 +1,22 @@
-﻿<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html>
+<html lang="de-DE">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
-<meta content="index, follow" name="robots"/>
-<meta content="UKNS IT-Premium Services" name="author"/>
-<meta content="DE-SN" name="geo.region"/>
-<meta content="Leipzig" name="geo.placename"/>
-<title>IT-Wissen | Tipps, Guides & how-to für Leipzig | UKNS</title>
-<meta content="Nützliches IT-Wissen für Leipzig: Anleitungen, Tipps & Troubleshooting-Guides. Praxisnah und verständlich. Jetzt Wissensdatenbank durchstöbern!" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UKNS IT-Wissen | IT-Ratgeber &amp; Artikel für Leipzig</title>
+<meta content="Ihr Wissens-Hub für IT-Support, Cybersecurity, Cloud &amp; Computerhilfe in Leipzig. Alle Fachartikel verständlich erklärt für Firmen &amp; Privatkunden." name="description"/>
 <link href="https://ukns.eu/it-wissen/" rel="canonical"/>
-<link rel="alternate" hreflang="de-DE" href="https://ukns.eu/it-wissen/"/>
-<link rel="alternate" hreflang="x-default" href="https://ukns.eu/it-wissen/"/>
-<!-- Open Graph -->
-<meta content="IT-Wissen" property="og:title"/>
-<meta content="Nützliches IT-Wissen für Leipzig: Anleitungen, Tipps & Troubleshooting-Guides. Praxisnah und verständlich. Jetzt Wissensdatenbank durchstöbern!" property="og:description"/>
-<meta content="https://ukns.eu/it-wissen/" property="og:url"/>
-<meta content="https://ukns.eu/social-share.png" property="og:image"/>
-<meta content="UKNS IT-Premium Services" property="og:site_name"/>
-<meta content="de_DE" property="og:locale"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="IT-Wissen" name="twitter:title"/>
-<meta content="Nützliches IT-Wissen für Leipzig: Anleitungen, Tipps & Troubleshooting-Guides. Praxisnah und verständlich. Jetzt Wissensdatenbank durchstöbern!" name="twitter:description"/>
-<meta content="https://ukns.eu/social-share.png" name="twitter:image"/>
-<!-- WebSite-Suchaktionen -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "UKNS IT-Premium Services",
-  "url": "https://ukns.eu/",
-  "inLanguage": "de-DE"
-}
-</script>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<link color="#2b3990" href="/safari-pinned-tab.svg" rel="mask-icon"/>
-<meta content="#2b3990" name="msapplication-TileColor">
-<meta content="#ffffff" name="theme-color">
-<link as="font" crossorigin="" href="/fonts/montserrat-v30-latin-700.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/fonts/open-sans-v43-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="/css/style.optimized.css?v=20260608-footer" rel="stylesheet"/>
-<!-- Breadcrumb Navigation -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://ukns.eu/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "IT-Wissen",
-      "item": "https://ukns.euit-wissen/"
-    }
-  ]
-}
-</script>
+<link href="/css/style.optimized.css?v=20260608-footer" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-<body x-data="{ mobileMenu: false, openFaq: null }">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
 <header class="bg-white shadow-sm fixed top-0 w-full z-40">
 <nav class="main-navigation max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-16">
@@ -81,7 +30,7 @@
 </a>
 </div>
 <div class="hidden md:flex items-center space-x-1">
-<a aria-label="Startseite" class="menu-item text-gray-700 transition px-3 py-2" href="/"><i class="fas fa-home"></i></a>
+<a aria-label="Startseite" class="menu-item text-primary-blue transition px-3 py-2" href="/"><i class="fas fa-home"></i></a>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
 <a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-2"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
@@ -111,23 +60,16 @@
 </div>
 </div>
 <div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
-<a class="menu-item text-primary-blue transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-2"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
+<a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-2"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
 <div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
-<a class="dropdown-item block px-4 py-2 text-sm text-primary-blue font-bold" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2"></i>Backup-Lösungen</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2"></i>Backup-Lösungen</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2"></i>Datenrettung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2"></i>Netzwerkinstallation</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2"></i>Netzwerk-Optimierung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2"></i>Server-Datenrettung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2"></i>Server-Wartung</a>
-<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/serverloesungen-leipzig/"><i class="fas fa-cubes fa-fw mr-2"></i>Virtualisierung</a>
+<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/virtualisierung-leipzig/"><i class="fas fa-cubes fa-fw mr-2"></i>Virtualisierung</a>
 <a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2"></i>WLAN-Probleme</a>
-</div>
-</div>
-<div @mouseenter="open = true" @mouseleave="open = false" class="relative dropdown-container" x-data="{ open: false }">
-<a class="menu-item text-gray-700 transition px-3 py-2 flex items-center cursor-pointer focus:outline-none" href="/it-support-leipzig/"><i class="fas fa-headset mr-2"></i>IT-Support <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-2 transform transition-transform duration-200"></i></a>
-<div class="sub-menu absolute left-0 mt-2 min-w-max bg-white rounded-md shadow-xl z-20 py-2" x-show="open" x-transition="">
-<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2"></i>Windows 10: Was tun bei Support-Ende?</a>
-<a class="dropdown-item block px-4 py-2 text-sm text-gray-700" href="/windows-11-upgrade-leipzig/"><i class="fas fa-rocket fa-fw mr-2"></i>Windows 11: Upgrade & Installation</a>
 </div>
 </div>
 <a class="menu-item text-gray-700 transition px-3 py-2 inline-flex items-center" href="/it-wissen/"><i class="fas fa-book-open mr-2"></i>IT-Wissen</a>
@@ -181,31 +123,21 @@
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/firma-webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 opacity-70"></i>Webdesign für Firmen</a>
 </div>
 </div>
-<div x-data="{ open: true }"> <!-- This section is open by default on this page -->
-<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg bg-primary-blue-dark transition">
+<div x-data="{ open: false }">
+<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
 <span><i class="fas fa-server fa-fw mr-3"></i>Server &amp; Netzwerk</span>
 <i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
 </button>
 <div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/serverloesungen-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Alle Serverlösungen</a>
-<a class="block px-4 py-2 text-base bg-primary-blue font-bold transition" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 opacity-70"></i>Backup-Lösungen</a>
-<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/datenrettung-leipzig/"><i class="fas fa-hdd fa-fw mr-2 opacity-70"></i>Datenrettung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 opacity-70"></i>Backup-Lösungen</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/datenrettung-festplatte-leipzig/"><i class="fas fa-hdd fa-fw mr-2 opacity-70"></i>Datenrettung Festplatte</a>
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerkinstallation-wartung-leipzig/"><i class="fas fa-plug fa-fw mr-2 opacity-70"></i>Netzwerkinstallation</a>
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/netzwerk-optimieren-leipzig/"><i class="fas fa-tachometer-alt fa-fw mr-2 opacity-70"></i>Netzwerk-Optimierung</a>
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-datenrettung-leipzig/"><i class="fas fa-server fa-fw mr-2 opacity-70"></i>Server-Datenrettung</a>
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/server-wartung-leipzig/"><i class="fas fa-wrench fa-fw mr-2 opacity-70"></i>Server-Wartung</a>
-<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/serverloesungen-leipzig/"><i class="fas fa-cubes fa-fw mr-2 opacity-70"></i>Virtualisierung</a>
+<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/virtualisierung-leipzig/"><i class="fas fa-cubes fa-fw mr-2 opacity-70"></i>Virtualisierung</a>
 <a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/wlan-probleme-leipzig/"><i class="fas fa-wifi fa-fw mr-2 opacity-70"></i>WLAN-Probleme</a>
-</div>
-</div>
-<div x-data="{ open: false }">
-<button @click="open = !open" class="w-full flex justify-between items-center px-4 py-3 text-lg hover:bg-primary-blue-dark transition">
-<span><i class="fas fa-headset fa-fw mr-3"></i>IT-Support</span>
-<i :class="{'rotate-180': open}" class="fas fa-chevron-down transform transition-transform"></i>
-</button>
-<div class="bg-primary-blue-dark pl-6" x-show="open" x-transition="">
-<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/windows-10-support-ende-leipzig/"><i class="fab fa-windows fa-fw mr-2 opacity-70"></i>Windows 10: Was tun bei Support-Ende?</a>
-<a class="block px-4 py-2 text-base hover:bg-primary-blue transition" href="/windows-11-upgrade-leipzig/"><i class="fas fa-rocket fa-fw mr-2 opacity-70"></i>Windows 11: Upgrade & Installation</a>
 </div>
 </div>
 <a class="block px-4 py-3 text-lg hover:bg-primary-blue-dark transition" href="/it-wissen/"><i class="fas fa-book-open fa-fw mr-3"></i>IT-Wissen</a>
@@ -217,202 +149,169 @@
 </div>
 </nav>
 </header>
-<main class="pt-16">
-<section class="bg-gray-100 py-16 md:py-24" id="hero-wissen">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h1 class="text-4xl md:text-5xl font-bold text-primary-blue mb-4">UKNS IT-Wissen</h1>
-<p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Ihr Wissens-Hub für praxisnahe IT-Themen. Hier teilen wir unsere Expertise und geben Einblicke in die Welt der Unternehmens-IT – verständlich erklärt für Entscheider in Leipzig und Umgebung.</p>
-</div>
-</section>
-<section class="py-16 md:py-20 bg-white">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl font-bold text-primary-blue mb-12 text-center">Aktuelle Beiträge aus unserem Blog</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-notfallplan-unternehmen-leipzig/">
-<img alt="IT-Notfallplan für Unternehmen in Leipzig als praktische Checkliste" class="w-full h-48 object-cover" src="/images/IT-Analyse-Leipzig-Team-1200.jpg" fetchpriority="high" decoding="async" width="1200" height="800"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">IT-Sicherheit & Notfallplanung</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">IT-Notfallplan für Unternehmen: Checkliste für Ausfall, Angriff und Datenverlust</h3>
-<p class="text-gray-600 text-sm mb-4">Eine praktische Vorlage für Leipziger Unternehmen: erste 15 Minuten, Rollen, Kontakte, Szenarien und Wiederanlauf priorisieren.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-dienstleister-mittelstand-leipzig/">
-<img alt="Ein Team bei der strategischen IT-Planung für den Mittelstand" class="w-full h-48 object-cover" src="/images/it-dienstleister-mittelstand-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="654"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">IT-Strategie für KMU</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">IT für den Mittelstand: Warum ein strategischer Partner den Unterschied macht</h3>
-<p class="text-gray-600 text-sm mb-4">Erfahren Sie, wie eine proaktive IT-Betreuung speziell für KMU in Leipzig die Effizienz steigert und Ihr Unternehmen für die Zukunft rüstet.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/windows-10-support-ende-leipzig/">
-<img alt="Ein Kalenderblatt zeigt das End-Datum für den Windows 10 Support, daneben ein Computer" class="w-full h-48 object-cover" src="/images/windows-10-support-ende-leipzig-1200.jpg" loading="lazy" decoding="async" width="1408" height="768"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">IT-Support & Sicherheit</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Windows 10 Support-Ende: Jetzt handeln!</h3>
-<p class="text-gray-600 text-sm mb-4">Der offizielle Support für Windows 10 endet. Erfahren Sie, warum ein rechtzeitiges Upgrade für Leipziger Unternehmen wichtig ist, um Sicherheitsrisiken zu vermeiden.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/windows-11-upgrade-leipzig/">
-<img alt="Ein moderner Laptop mit Windows 11, der den reibungslosen Umstieg symbolisiert" class="w-full h-48 object-cover" src="/images/windows-11-upgrade-leipzig-1200.jpg" loading="lazy" decoding="async" width="1408" height="768"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">IT-Support & Upgrade</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Nahtloses Upgrade: Sicher auf Windows 11 umsteigen</h3>
-<p class="text-gray-600 text-sm mb-4">Windows 11 bietet mehr Sicherheit und moderne Funktionen. Wir sorgen für einen reibungslosen Umstieg für Ihr Unternehmen in Leipzig – von der Planung bis zur Installation.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-fuer-immobilienfirmen-leipzig/">
-<img alt="Immobilienmakler arbeitet mobil mit einem Tablet" class="w-full h-48 object-cover" src="/images/it-fuer-immobilienfirmen-leipzig.jpg" loading="lazy" decoding="async" width="1408" height="768"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Branchenlösungen</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">IT für Immobilienfirmen: Mobil, sicher und effizient in Leipzig</h3>
-<p class="text-gray-600 text-sm mb-4">Die Immobilienbranche ist dynamisch. Entdecken Sie, welche IT-Lösungen für Makler und Hausverwaltungen entscheidend sind.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/webdesign-leipzig/">
-<img alt="Moderne Website auf einem Laptop, die professionelles Webdesign symbolisiert" class="w-full h-48 object-cover" src="/images/webdesign-leipzig-ukns-1200.jpg" loading="lazy" decoding="async" width="1200" height="654"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Digital & Web</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Professionelles Webdesign, das für Sie arbeitet</h3>
-<p class="text-gray-600 text-sm mb-4">Ihre Website ist Ihr digitaler Vertriebsmitarbeiter. Wir sorgen dafür, dass sie nicht nur gut aussieht, sondern auch schnell, sicher und zuverlässig ist.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/cloud-loesungen-leipzig/">
-<img alt="Abstrakte Darstellung einer Cloud-Infrastruktur" class="w-full h-48 object-cover" src="/images/cloud-loesungen-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="654"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Cloud & Infrastruktur</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Cloud Lösungen: Ihr Weg in die digitale Zukunft</h3>
-<p class="text-gray-600 text-sm mb-4">Machen Sie Ihr Unternehmen agiler, sicherer und wettbewerbsfähiger mit einer maßgeschneiderten Cloud-Strategie für Ihre Ziele.</p>
-<span class="font-semibold text-primary-blue hover:underline">Weiterlesen →</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
 
+<main class="pt-20">
+  <!-- Hero Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <span class="bg-amber-400 text-slate-950 font-black text-xs uppercase px-4 py-1.5 rounded-full shadow-md inline-block mb-4">Wissen &amp; Praxis-Tipps</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight">UKNS IT-Wissen &amp; Ratgeber</h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
+        Ihr Experten-Hub für IT-Sicherheit, Cloud-Migration, Managed Services und Computerhilfe in Leipzig – 100% verständlich erklärt ohne Fachchinesisch.
+      </p>
+    </div>
+  </section>
 
-<!-- Humanized competitor content generated -->
-<section class="py-16 md:py-20 bg-white" id="humanized-ratgeber">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold text-primary-blue mb-4">Ratgeber mit echter Alltagsperspektive</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Aus der Wettbewerbsanalyse abgeleitet, aber bewusst menschlich geschrieben: klare Orientierung, typische Situationen, ehrliche nächste Schritte.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <!-- Articles Grid Section -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Alle IT-Wissen Artikel &amp; Leitfäden</h2>
+        <p class="text-slate-600 text-base max-w-2xl mx-auto font-medium">Wählen Sie einen Artikel aus unserer Wissensdatenbank für Leipziger Unternehmen und Privatkunden.</p>
+      </div>
 
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-wissen/it-service-leipzig-anbieter-vergleichen.html">
-<img alt="IT-Service Anbieter in Leipzig vergleichen" class="w-full h-48 object-cover" src="/images/it-service-leipzig-team-1200.jpg" loading="lazy" decoding="async" width="1200" height="800"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Humanized Ratgeber</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">IT-Service in Leipzig vergleichen</h3>
-<p class="text-gray-600 text-sm mb-4">Woran Sie einen guten IT-Service in Leipzig erkennen: klare Abläufe, ehrliche Preise, Sicherheit, Reaktionszeit und passende Betreuung statt reiner Werbeversprechen.</p>
-<span class="font-semibold text-primary-blue hover:underline">Lesen →</span>
-</div>
-</a>
-</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Artikel 1: Computerhilfe ohne Fachchinesisch -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/computerhilfe-leipzig-ohne-fachchinesisch.html">
+            <div class="p-7">
+              <span class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Computerhilfe &amp; Support</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">Computerhilfe in Leipzig: Verständlicher IT-Support ohne Fachchinesisch</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Warum guter IT-Support vor allem verständlich sein muss. Erfahren Sie, wie wir PC- &amp; Mac-Probleme in Leipzig geduldig und ohne Kompliziertheit lösen.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>5 Min. Lesezeit</span>
+            <a href="/it-wissen/computerhilfe-leipzig-ohne-fachchinesisch.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-wissen/it-betreuung-kleine-firmen-leipzig-praxis.html">
-<img alt="IT-Betreuung für kleine Firmen in Leipzig" class="w-full h-48 object-cover" src="/images/IT-Analyse-Leipzig-Team-1200.jpg" loading="lazy" decoding="async" width="1200" height="800"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Humanized Ratgeber</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">IT-Betreuung für kleine Firmen in Leipzig</h3>
-<p class="text-gray-600 text-sm mb-4">Praxisnaher Ratgeber für kleine Firmen in Leipzig: Welche IT-Betreuung wirklich hilft, wie Prioritäten entstehen und wann laufender Support sinnvoll ist.</p>
-<span class="font-semibold text-primary-blue hover:underline">Lesen →</span>
-</div>
-</a>
-</div>
+        <!-- Artikel 2: Fernwartung vs Vor-Ort -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/fernwartung-oder-vor-ort-it-service-leipzig.html">
+            <div class="p-7">
+              <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-3">IT-Service &amp; Betreuung</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">Fernwartung vs. Vor-Ort IT-Service in Leipzig: Wann lohnt sich was?</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Vor-Ort-Termin oder schnelle Online-Fernwartung via AnyDesk/TeamViewer? Ein Vergleich der Vor- und Nachteile für Firmen und Privatkunden.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>6 Min. Lesezeit</span>
+            <a href="/it-wissen/fernwartung-oder-vor-ort-it-service-leipzig.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-wissen/computerhilfe-leipzig-ohne-fachchinesisch.html">
-<img alt="Verständliche Computerhilfe in Leipzig" class="w-full h-48 object-cover" src="/images/computer-reparatur-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="800"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Humanized Ratgeber</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Computerhilfe in Leipzig ohne Fachchinesisch</h3>
-<p class="text-gray-600 text-sm mb-4">Computerhilfe in Leipzig für Privatkunden: verständlich, ruhig und nachvollziehbar bei PC, Laptop, Outlook, Drucker, WLAN, Viren und Datensicherung.</p>
-<span class="font-semibold text-primary-blue hover:underline">Lesen →</span>
-</div>
-</a>
-</div>
+        <!-- Artikel 3: Firmenkunden IT-Dienstleistungen -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/firmenkunden-it-dienstleistungen.html">
+            <div class="p-7">
+              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full mb-3">B2B Managed IT</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">IT-Dienstleistungen für Firmenkunden: Von Managed Services bis Cybersecurity</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Ein umfassender Überblick über modernste Firmen-IT: Managed Antivirus, Backup-Lösungen, Server-Wartung und Cloud-Strategien für Leipziger Unternehmen.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>8 Min. Lesezeit</span>
+            <a href="/it-wissen/firmenkunden-it-dienstleistungen.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-<a class="block" href="/it-wissen/fernwartung-oder-vor-ort-it-service-leipzig.html">
-<img alt="Fernwartung oder Vor-Ort IT-Service in Leipzig" class="w-full h-48 object-cover" src="/images/it-support-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="800"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Humanized Ratgeber</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">Fernwartung oder Vor-Ort-Service?</h3>
-<p class="text-gray-600 text-sm mb-4">Wann Fernwartung reicht und wann Vor-Ort-Service in Leipzig besser ist: praktische Entscheidungshilfe für Privatkunden und Unternehmen.</p>
-<span class="font-semibold text-primary-blue hover:underline">Lesen →</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- /Humanized competitor content generated -->
+        <!-- Artikel 4: IT-Betreuung kleine Firmen & Praxen -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/it-betreuung-kleine-firmen-leipzig-praxis.html">
+            <div class="p-7">
+              <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Praxis-Leitfaden</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">IT-Betreuung für kleine Firmen &amp; Praxen in Leipzig: Der Praxis-Leitfaden</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Wie Kanzleien, Arztpraxen und Handwerksbetriebe ihre IT ausfallsicher, DSGVO-konform und kostengünstig organisieren.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>7 Min. Lesezeit</span>
+            <a href="/it-wissen/it-betreuung-kleine-firmen-leipzig-praxis.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
+        <!-- Artikel 5: IT-Service Anbieter vergleichen -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/it-service-leipzig-anbieter-vergleichen.html">
+            <div class="p-7">
+              <span class="inline-block bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Systemhaus Vergleich</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">IT-Service in Leipzig vergleichen: Worauf müssen Unternehmen achten?</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Stundenverrechnungssatz vs. Pauschale, Reaktionszeiten, DSGVO-Wartung: 7 Kriterien für die Auswahl des richtigen IT-Partners in Leipzig.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>6 Min. Lesezeit</span>
+            <a href="/it-wissen/it-service-leipzig-anbieter-vergleichen.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<!-- SEO service hubs generated -->
+        <!-- Artikel 6: Privatkunden Computerhilfe Themen -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-wissen/privatkunden-computerhilfe-themen.html">
+            <div class="p-7">
+              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Privatkunden Ratgeber</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">Computerhilfe für Privatkunden: Tipps &amp; schnelle Lösungen bei PC-Problemen</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Langsamer Laptop, Virusverdacht, WLAN-Probleme oder Datenverlust? Einfache Schritt-für-Schritt Anleitungen für Ihr Zuhause.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>5 Min. Lesezeit</span>
+            <a href="/it-wissen/privatkunden-computerhilfe-themen.html" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<section class="py-16 md:py-20 bg-gray-100" id="seo-service-hubs">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold text-primary-blue mb-4">Neue IT-Service-Themen</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Zusätzliche Ratgeber- und Leistungsseiten für Firmenkunden und Privatkunden, sauber nach Themenclustern sortiert.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<a class="block" href="/it-wissen/firmenkunden-it-dienstleistungen.html">
-<img alt="Firmenkunden IT-Dienstleistungen in Leipzig" class="w-full h-48 object-cover" src="/images/generated/microsoft-365-backup-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="675"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Firmenkunden</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">50 neue IT-Dienstleistungen für Unternehmen</h3>
-<p class="text-gray-600 text-sm mb-4">Microsoft 365, Security, Monitoring, Backup, Netzwerk, Compliance und Managed Services als eigene Themencluster.</p>
-<span class="font-semibold text-primary-blue hover:underline">Alle Firmenkunden-Themen ansehen →</span>
-</div>
-</a>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<a class="block" href="/it-wissen/privatkunden-computerhilfe-themen.html">
-<img alt="Privatkunden Computerhilfe in Leipzig" class="w-full h-48 object-cover" src="/images/generated/pc-hilfe-leipzig-1200.jpg" loading="lazy" decoding="async" width="1200" height="675"/>
-<div class="p-6">
-<p class="text-sm text-primary-blue font-semibold mb-2">Privatkunden</p>
-<h3 class="text-xl font-bold text-gray-900 mb-3">50 neue Computerhilfe-Themen für Privatkunden</h3>
-<p class="text-gray-600 text-sm mb-4">PC-Hilfe, Outlook, Drucker, WLAN, Windows, Viren, Datenrettung, Mac, Smartphone und digitale Alltagshilfe.</p>
-<span class="font-semibold text-primary-blue hover:underline">Alle Privatkunden-Themen ansehen →</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
+        <!-- Artikel 7: IT-Notfallplan Checkliste -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-notfallplan-unternehmen-leipzig/">
+            <div class="p-7">
+              <span class="inline-block bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Notfallplanung &amp; Security</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">IT-Notfallplan für Unternehmen: Checkliste für Ausfall, Angriff &amp; Datenverlust</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Eine praktische Vorlage für Leipziger Unternehmen: Erste 15 Minuten, Rollen, Kontakte, Szenarien und Wiederanlauf-Prioritäten.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>9 Min. Lesezeit</span>
+            <a href="/it-notfallplan-unternehmen-leipzig/" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
-<!-- /SEO service hubs generated -->
+        <!-- Artikel 8: IT für den Mittelstand -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/it-dienstleister-mittelstand-leipzig/">
+            <div class="p-7">
+              <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Mittelstands-Strategie</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">IT für den Mittelstand: Warum ein strategischer Partner den Unterschied macht</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Erfahren Sie, wie eine proaktive IT-Betreuung speziell für KMU in Leipzig die Effizienz steigert und Ihr Unternehmen absichert.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>7 Min. Lesezeit</span>
+            <a href="/it-dienstleister-mittelstand-leipzig/" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
+        <!-- Artikel 9: Windows 10 Support Ende -->
+        <article class="bg-white rounded-2xl shadow-lg border border-slate-200/90 overflow-hidden transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+          <a class="block flex-grow" href="/windows-10-support-ende-leipzig/">
+            <div class="p-7">
+              <span class="inline-block bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full mb-3">Windows &amp; Hardware</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-blue-600 transition">Windows 10 Support-Ende: Handlungsempfehlungen für Firmen in Leipzig</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">Sicherheitsrisiken nach dem EOL vermeiden: Der Fahrplan für die Migration auf Windows 11 oder Cloud-Workspaces.</p>
+            </div>
+          </a>
+          <div class="px-7 pb-6 pt-0 mt-auto border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500"><i class="fas fa-clock mr-1"></i>6 Min. Lesezeit</span>
+            <a href="/windows-10-support-ende-leipzig/" class="text-sm font-bold text-blue-600 hover:text-blue-800 inline-flex items-center">Artikel lesen <i class="fas fa-arrow-right ml-1.5 text-xs"></i></a>
+          </div>
+        </article>
 
+      </div>
+    </div>
+  </section>
 
-<!-- ## SENIOR DESIGNER B2B CALLBACK & 15-MINUTEN GRATIS-ANALYSE ## -->
-
+  
 <!-- ## SENIOR UX DESIGNER 2-STEP INTERACTIVE CALLBACK FUNNEL ## -->
 <section class="py-16 md:py-20 bg-slate-100 border-t border-b border-slate-200/80 scroll-mt-custom" id="gratis-analyse-rueckruf">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -574,28 +473,18 @@
 </section>
 
 
+</main>
 
-    <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto flex-shrink-0">
-      <a href="/kontakt/?anfrage=15-Minuten-Gratis-Beratung" class="inline-flex items-center justify-center bg-primary-yellow text-primary-blue font-bold px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition shadow-lg glow-button yellow-glow text-base text-center">
-        <i class="fas fa-calendar-alt mr-2 text-lg"></i>Jetzt 15 Min. Gratis-Beratung sichern
-      </a>
-      <a href="mailto:support@ukns.eu?subject=15-Minuten%20Gratis-Beratung%20Anfrage" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl transition border border-white/30 text-sm text-center">
-        <i class="fas fa-envelope mr-2"></i>E-Mail schreiben
-      </a>
+<footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+    <p>&copy; 2026 UKNS IT-Premium Services Leipzig. Alle Rechte vorbehalten.</p>
+    <div class="mt-4 space-x-6">
+      <a href="/impressum/" class="hover:text-amber-400 transition">Impressum</a>
+      <a href="/datenschutz/" class="hover:text-amber-400 transition">Datenschutz</a>
+      <a href="/kontakt/" class="hover:text-amber-400 transition">Kontakt</a>
     </div>
   </div>
-</div>
-
-</main>
-<footer class="bg-dark-gray text-gray-300 pt-12 pb-8">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center gap-8 mb-8">
-<div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">UKNS IT-Premium Services</h3><p class="text-sm opacity-80">Ihr Partner für innovative IT-Lösungen und zuverlässigen Support in Leipzig.</p><p class="text-xs mt-4 opacity-90">UKNS UG (haftungsbeschränkt)</p></div>
-<div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">Unternehmen</h3><ul class="space-y-2 text-sm"><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/">Startseite</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/ueber-uns/">Über uns</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/jobs/">Jobs</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/kontakt/">Kontakt</a></li></ul></div>
-<div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">Rechtliches</h3><ul class="space-y-2 text-sm"><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/impressum/">Impressum</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/datenschutz/">Datenschutz</a></li></ul></div>
-</div>
-<div class="border-t border-gray-700 pt-8 text-center text-sm opacity-80"><p>© 2026 UKNS IT-Premium Services Leipzig. Alle Rechte vorbehalten.</p></div>
-</div>
 </footer>
-<script defer="" src="/js/bundle.js"></script></body>
+
+</body>
 </html>
