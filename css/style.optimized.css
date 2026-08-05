@@ -672,3 +672,71 @@ section {
   transform: translateY(-3px) !important;
   box-shadow: 0 20px 45px -5px rgba(245, 166, 35, 0.6) !important;
 }
+
+
+/* ==========================================================================
+   SENIOR UX CONTRAST & READABILITY AAA ENFORCEMENT ENGINE
+   ========================================================================== */
+
+/* 1. LIGHT CONTAINERS -> FORCED DARK TEXT (High Contrast) */
+.bg-white, .bg-slate-50, .bg-slate-100, .bg-gray-50, .bg-gray-100, .service-card-item, .benefit-card, article, .article-card {
+  color: #334155 !important;
+}
+
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-slate-50 h1, .bg-slate-50 h2, .bg-slate-50 h3, .bg-slate-50 h4, .bg-slate-50 h5, .bg-slate-50 h6,
+.bg-slate-100 h1, .bg-slate-100 h2, .bg-slate-100 h3, .bg-slate-100 h4, .bg-slate-100 h5, .bg-slate-100 h6,
+.service-card-item h1, .service-card-item h2, .service-card-item h3, .service-card-item h4,
+.benefit-card h1, .benefit-card h2, .benefit-card h3, .benefit-card h4,
+article h1, article h2, article h3, article h4 {
+  color: #0F172A !important;
+}
+
+.bg-white p, .bg-slate-50 p, .bg-slate-100 p, .service-card-item p, .benefit-card p, article p {
+  color: #334155 !important;
+}
+
+/* 2. DARK CONTAINERS -> FORCED WHITE & BRIGHT GOLD TEXT */
+.bg-slate-900, .bg-slate-800, .gradient-bg, .bg-contact-section, footer, #hero-wissen, .lifestyle-section {
+  color: #E2E8F0 !important;
+}
+
+.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3, .bg-slate-900 h4,
+.bg-slate-800 h1, .bg-slate-800 h2, .bg-slate-800 h3, .bg-slate-800 h4,
+.gradient-bg h1, .gradient-bg h2, .gradient-bg h3, .gradient-bg h4,
+.bg-contact-section h1, .bg-contact-section h2, .bg-contact-section h3, .bg-contact-section h4,
+footer h1, footer h2, footer h3, footer h4 {
+  color: #FFFFFF !important;
+}
+
+.bg-slate-900 p, .bg-slate-800 p, .gradient-bg p, .bg-contact-section p, footer p {
+  color: #CBD5E1 !important;
+}
+
+/* 3. BUTTON CONTRAST ENFORCEMENT */
+/* Yellow / Amber buttons -> Dark Black Text ALWAYS */
+.bg-primary-yellow, .bg-amber-400, .bg-yellow-400, .glow-button, button[type="submit"].bg-gradient-to-r {
+  color: #0F172A !important;
+  font-weight: 900 !important;
+}
+
+.bg-primary-yellow *, .bg-amber-400 *, .bg-yellow-400 *, .glow-button * {
+  color: #0F172A !important;
+}
+
+/* Dark Blue / Red Buttons -> Pure White Text ALWAYS */
+.bg-primary-blue, .bg-slate-900, .bg-blue-600, .bg-red-600, .it-notfall-button {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+/* Form Labels & Inputs -> High Contrast Dark Slate */
+label {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+}
+
+input, select, textarea {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+}
