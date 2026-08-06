@@ -34,7 +34,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://ukns.eu/"}, {"@type": "ListItem", "position": 2, "name": "IT-Wissen", "item": "https://ukns.eu/it-wissen/"}, {"@type": "ListItem", "position": 3, "name": "Datenschutz & IT-Technik Leipzig", "item": "https://ukns.eu/datenschutz-it-technik-leipzig/"}]}</script>
 <link rel="preload" as="font" crossorigin href="/fonts/montserrat-v30-latin-700.woff2" type="font/woff2"/>
 <link rel="preload" as="font" crossorigin href="/fonts/open-sans-v43-latin-regular.woff2" type="font/woff2"/>
-<link rel="stylesheet" href="/css/style.optimized.css?v=20260608-footer"/>
+<link rel="stylesheet" href="O85994516"/>
 <style>
   .seo-page { background:#f5f7fb; color:#101828; }
   .seo-hero { background:linear-gradient(135deg,rgba(12,25,79,.98),rgba(43,57,144,.94)); color:#fff; padding:7.5rem 0 4.5rem; }
@@ -93,7 +93,7 @@
 <header class="sticky top-0 z-50 bg-slate-900/98 backdrop-blur-2xl border-b border-amber-500/25 shadow-2xl">
 <div class="h-1 bg-gradient-to-r from-blue-600 via-amber-400 to-blue-600"></div>
 <nav class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8" x-data="{ mobileMenu: false }">
-<div class="flex justify-between items-center h-20 flex-nowrap whitespace-nowrap">
+<div class="flex justify-between items-center h-16 flex-nowrap whitespace-nowrap">
 <div class="flex-shrink-0 flex items-center mr-3 lg:mr-6">
 <a aria-label="Zur Startseite" href="/" class="flex items-center">
 <div class="logo-network">
@@ -106,8 +106,8 @@
 <div class="hidden md:flex md:items-center md:flex-nowrap whitespace-nowrap space-x-1 lg:space-x-2 text-xs lg:text-sm">
 <a class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center" href="/"><i class="fas fa-home mr-1.5 text-amber-400"></i>Startseite</a>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-1.5 text-blue-400"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-1.5 text-blue-400"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud fa-fw mr-2 text-blue-400"></i>Alle Cloud-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/microsoft-365-beratung-leipzig/"><i class="fas fa-lightbulb fa-fw mr-2 text-amber-400"></i>Microsoft 365 Beratung</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/microsoft-365-einrichtung-leipzig/"><i class="fas fa-play-circle fa-fw mr-2 text-amber-400"></i>Microsoft 365 Einrichtung</a>
@@ -116,8 +116,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-1.5 text-amber-400"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-1.5 text-amber-400"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 text-amber-400"></i>Alle Sicherheitslösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2 text-amber-400"></i>Endpoint Security</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/firma-firewall-schutzschild/"><i class="fas fa-fire-alt fa-fw mr-2 text-amber-400"></i>Firewall-Schutz</a>
@@ -127,8 +127,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-1.5 text-indigo-400"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-1.5 text-indigo-400"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 text-indigo-400"></i>Alle Digital-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2 text-indigo-400"></i>KI-Automatisierung</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/ki-leipzig/"><i class="fas fa-brain fa-fw mr-2 text-indigo-400"></i>KI-Lösungen</a>
@@ -136,8 +136,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-1.5 text-emerald-400"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-1.5 text-emerald-400"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/serverloesungen-leipzig/"><i class="fas fa-server fa-fw mr-2 text-emerald-400"></i>Alle Serverlösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 text-emerald-400"></i>Backup-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/datenrettung-festplatte-leipzig/"><i class="fas fa-hdd fa-fw mr-2 text-emerald-400"></i>Datenrettung Festplatte</a>

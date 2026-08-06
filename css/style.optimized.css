@@ -433,13 +433,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800 !important;
 }
 
-/* Sticky Header UX & Glassmorphism */
-header.bg-white {
-  background: rgba(255, 255, 255, 0.94) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
-  box-shadow: 0 4px 25px -5px rgba(15, 23, 42, 0.05) !important;
+/* Sticky Header UX & Glassmorphism - Forced Dark */
+header.bg-white, header.bg-slate-900\/98 {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.96) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(245, 166, 35, 0.25) !important;
+  box-shadow: 0 15px 40px -10px rgba(15, 23, 42, 0.6) !important;
 }
 
 /* IT-Notfall Pulse Animation */
@@ -615,17 +615,11 @@ article:hover, .article-card:hover {
   }
 }
 
-/* Edler Innenabstand (Generous Internal Padding) */
+/* Edler Innenabstand (Kompakter & Einheitlicher nach Kundenwunsch) */
+/* Edler Innenabstand (Kompakter & Einheitlicher nach Kundenwunsch) 
+   Removed forced global padding so Tailwind py-* classes work correctly without doubling up. */
 section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding-top: 6.5rem !important;
-    padding-bottom: 6.5rem !important;
-  }
+  /* padding handled by Tailwind classes (py-12 etc.) */
 }
 
 /* 21st.dev Glass Bento-Cards & Container Overhaul */
@@ -788,11 +782,23 @@ input:focus, textarea:focus, select:focus {
   left: 0 !important;
   z-index: 9999 !important;
   min-width: 240px !important;
-  background-color: #FFFFFF !important;
-  border: 1px solid #E2E8F0 !important;
+  background-color: #0F172A !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
   border-radius: 1rem !important;
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.15) !important;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.5) !important;
   padding: 0.75rem 0 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Invisible bridge to prevent hover loss between menu and dropdown */
+.nav-dropdown .sub-menu::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background: transparent;
 }
 
 .nav-dropdown:hover .sub-menu,

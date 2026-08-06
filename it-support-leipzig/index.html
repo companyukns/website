@@ -100,7 +100,7 @@
       ]
     }
     </script>
-<link as="font" crossorigin="" href="/fonts/montserrat-v30-latin-700.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/fonts/open-sans-v43-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="/css/style.optimized.css?v=20260608-footer" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link as="font" crossorigin="" href="/fonts/montserrat-v30-latin-700.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="/fonts/open-sans-v43-latin-regular.woff2" rel="preload" type="font/woff2"/><link href="O85994516" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -109,7 +109,7 @@
 <header class="sticky top-0 z-50 bg-slate-900/98 backdrop-blur-2xl border-b border-amber-500/25 shadow-2xl">
 <div class="h-1 bg-gradient-to-r from-blue-600 via-amber-400 to-blue-600"></div>
 <nav class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8" x-data="{ mobileMenu: false }">
-<div class="flex justify-between items-center h-20 flex-nowrap whitespace-nowrap">
+<div class="flex justify-between items-center h-16 flex-nowrap whitespace-nowrap">
 <div class="flex-shrink-0 flex items-center mr-3 lg:mr-6">
 <a aria-label="Zur Startseite" href="/" class="flex items-center">
 <div class="logo-network">
@@ -122,8 +122,8 @@
 <div class="hidden md:flex md:items-center md:flex-nowrap whitespace-nowrap space-x-1 lg:space-x-2 text-xs lg:text-sm">
 <a class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center" href="/"><i class="fas fa-home mr-1.5 text-amber-400"></i>Startseite</a>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-1.5 text-blue-400"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud mr-1.5 text-blue-400"></i>Cloud <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/cloud-loesungen-leipzig/"><i class="fas fa-cloud fa-fw mr-2 text-blue-400"></i>Alle Cloud-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/microsoft-365-beratung-leipzig/"><i class="fas fa-lightbulb fa-fw mr-2 text-amber-400"></i>Microsoft 365 Beratung</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/microsoft-365-einrichtung-leipzig/"><i class="fas fa-play-circle fa-fw mr-2 text-amber-400"></i>Microsoft 365 Einrichtung</a>
@@ -132,8 +132,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-1.5 text-amber-400"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt mr-1.5 text-amber-400"></i>Cybersecurity <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/it-sicherheit-leipzig/"><i class="fas fa-shield-alt fa-fw mr-2 text-amber-400"></i>Alle Sicherheitslösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/endpoint-security-leipzig/"><i class="fas fa-laptop-house fa-fw mr-2 text-amber-400"></i>Endpoint Security</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/firma-firewall-schutzschild/"><i class="fas fa-fire-alt fa-fw mr-2 text-amber-400"></i>Firewall-Schutz</a>
@@ -143,8 +143,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-1.5 text-indigo-400"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/webdesign-leipzig/"><i class="fas fa-desktop mr-1.5 text-indigo-400"></i>Digitales <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/webdesign-leipzig/"><i class="fas fa-paint-brush fa-fw mr-2 text-indigo-400"></i>Alle Digital-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/ki-automatisierung-leipzig/"><i class="fas fa-robot fa-fw mr-2 text-indigo-400"></i>KI-Automatisierung</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/ki-leipzig/"><i class="fas fa-brain fa-fw mr-2 text-indigo-400"></i>KI-Lösungen</a>
@@ -152,8 +152,8 @@
 </div>
 </div>
 <div class="nav-dropdown relative" x-data="{ open: false }" @mouseleave="open = false">
-<a @click.prevent="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-1.5 text-emerald-400"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
-<div class="sub-menu absolute left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
+<a @click="open = !open" @mouseenter="open = true" class="menu-item text-slate-100 hover:text-amber-400 font-bold transition px-2 py-2 inline-flex items-center cursor-pointer" href="/serverloesungen-leipzig/"><i class="fas fa-server mr-1.5 text-emerald-400"></i>Server &amp; Netzwerk <i :class="{'rotate-180': open}" class="fas fa-chevron-down text-xs ml-1 transform transition-transform"></i></a>
+<div class="sub-menu absolute !bg-slate-900 !bg-slate-900 left-0 mt-2 w-64 bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl py-3 z-50 text-slate-100" x-show="open" x-transition @click.away="open = false">
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/serverloesungen-leipzig/"><i class="fas fa-server fa-fw mr-2 text-emerald-400"></i>Alle Serverlösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/backup-loesungen-leipzig/"><i class="fas fa-save fa-fw mr-2 text-emerald-400"></i>Backup-Lösungen</a>
 <a class="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 hover:text-amber-400 font-medium" href="/datenrettung-festplatte-leipzig/"><i class="fas fa-hdd fa-fw mr-2 text-emerald-400"></i>Datenrettung Festplatte</a>
@@ -188,8 +188,8 @@
 <main>
 <section class="relative gradient-bg text-white scroll-mt-custom" data-aos="fade-in" id="hero-pro-support">
 <div class="network-bg"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 <div data-aos="fade-right">
 
 <div class="inline-flex items-center bg-slate-900/90 text-white font-extrabold text-xs uppercase px-4 py-2 rounded-full shadow-xl border border-slate-700/80 mb-6 backdrop-blur-md">
@@ -202,7 +202,7 @@
 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                             IT-Support in Leipzig: <span class="text-primary-yellow">Ihr Anker in der digitalen Welt.</span>
 </h1>
-<p class="text-lg md:text-xl mb-8 opacity-90">
+<p class="text-lg md:text-xl mb-6 opacity-90">
                            IT-Probleme sind mehr als nur Technik – sie kosten Zeit, Geld und Nerven. Wir sind der Partner an der Seite von Leipziger Unternehmen, der Störungen nicht nur beseitigt, sondern aktiv vorbeugt. Damit Sie sich auf das konzentrieren können, was wirklich zählt: Ihr Geschäft.
                         </p>
 <div class="flex flex-col sm:flex-row gap-4">
@@ -225,9 +225,9 @@
 </div>
 </div>
 </section>
-<section class="py-16 md:py-20 bg-gray-100 scroll-mt-custom" data-aos="fade-in" id="benefits-pro-support">
+<section class="py-4 md:py-6 bg-gray-100 scroll-mt-custom" data-aos="fade-in" id="benefits-pro-support">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12 md:mb-16">
+<div class="text-center mb-6 md:mb-6">
 <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">Wir sind mehr als nur ein Dienstleister – <span class="text-primary-yellow">wir sind Ihr Partner.</span></h2>
 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                         "Professioneller IT-Support" bedeutet für uns, das Rückgrat Ihrer Firma zu sein. Verlässlich, proaktiv und immer auf Ihrer Seite.
@@ -257,9 +257,9 @@
 </div>
 </div>
 </section>
-<section class="py-16 md:py-20 bg-white scroll-mt-custom" data-aos="fade-in" id="support-modelle">
+<section class="py-4 md:py-6 bg-white scroll-mt-custom" data-aos="fade-in" id="support-modelle">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12 md:mb-16">
+<div class="text-center mb-6 md:mb-6">
 <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">Wie wir Ihnen den Rücken freihalten</h2>
 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                         Unsere Support-Bausteine sind darauf ausgelegt, Ihnen maximale Sicherheit und Effizienz zu bieten.
@@ -299,9 +299,9 @@
 </div>
 </div>
 </section>
-<section class="py-16 md:py-20 bg-gray-100 scroll-mt-custom" data-aos="fade-in" id="faq-pro-support">
+<section class="py-4 md:py-6 bg-gray-100 scroll-mt-custom" data-aos="fade-in" id="faq-pro-support">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
+<div class="text-center mb-6">
 <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-4">Fragen, die sich Unternehmer stellen</h2>
 <p class="text-lg text-gray-600">Klare Antworten für Ihre Entscheidung.</p>
 </div>
@@ -348,7 +348,7 @@
 <!-- ## COMPACT ELEGANT EXECUTIVE CALLBACK CARD (21ST.DEV DESIGN) ## -->
 <!-- ## 21ST.DEV EXECUTIVE CALLBACK CARD (SENIOR B2B DESIGN) ## -->
 <!-- ## DEEP NAVY BLUE EXECUTIVE CALLBACK CARD (21ST.DEV LUXURY B2B DESIGN) ## -->
-<section class="py-16 md:py-20 bg-slate-900 border-t border-b border-slate-800 scroll-mt-custom relative overflow-hidden" id="gratis-analyse-rueckruf">
+<section class="py-4 md:py-6 bg-slate-900 border-t border-b border-slate-800 scroll-mt-custom relative overflow-hidden" id="gratis-analyse-rueckruf">
   <div class="network-bg"></div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
     <div class="bg-gradient-to-br from-slate-900 via-slate-800/95 to-slate-900 rounded-3xl shadow-2xl border border-slate-700/80 overflow-hidden backdrop-blur-xl">
@@ -375,7 +375,7 @@
         <div class="max-w-2xl mx-auto bg-slate-800/90 rounded-2xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl backdrop-blur-md">
           
           <!-- Progress Indicator -->
-          <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-700/80 text-xs font-extrabold text-slate-200">
+          <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-700/80 text-xs font-extrabold text-slate-200">
             <span class="flex items-center">
               <span class="w-7 h-7 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center mr-2.5 text-xs font-black" x-text="step"></span>
               <span x-text="step === 1 ? 'Schritt 1: Thema wählen' : 'Schritt 2: Kontaktdaten eingeben'"></span>
@@ -486,7 +486,7 @@
         </div>
 
         <!-- Trust Seals Footer -->
-        <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-bold text-slate-400">
+        <div class="mt-4 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-bold text-slate-400">
           <span><i class="fas fa-shield-alt text-amber-400 mr-1.5"></i>100% Unverbindlich</span>
           <span>•</span>
           <span><i class="fas fa-lock text-amber-400 mr-1.5"></i>DSGVO Konform</span>
@@ -503,21 +503,12 @@
 
 
 
-    <div class="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto flex-shrink-0">
-      <a href="/kontakt/?anfrage=15-Minuten-Gratis-Beratung" class="inline-flex items-center justify-center bg-primary-yellow text-primary-blue font-bold px-6 py-3.5 rounded-xl hover:bg-yellow-400 transition shadow-lg glow-button yellow-glow text-base text-center">
-        <i class="fas fa-calendar-alt mr-2 text-lg"></i>Jetzt 15 Min. Gratis-Beratung sichern
-      </a>
-      <a href="mailto:support@ukns.eu?subject=15-Minuten%20Gratis-Beratung%20Anfrage" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl transition border border-white/30 text-sm text-center">
-        <i class="fas fa-envelope mr-2"></i>E-Mail schreiben
-      </a>
-    </div>
-  </div>
-</div>
 
-<section class="py-16 bg-contact-section text-white scroll-mt-custom" data-aos="fade-in" id="contact">
+
+<section class="py-4 bg-contact-section text-white scroll-mt-custom" data-aos="fade-in" id="contact">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold mb-4"> Schluss mit dem IT-Stress. <span class="text-primary-yellow">Konzentrieren Sie sich wieder auf Ihr Geschäft.</span> </h2><p class="text-lg opacity-90 max-w-3xl mx-auto">Lassen Sie uns in einem unverbindlichen Gespräch herausfinden, wie wir Ihre IT in Leipzig auf ein neues Level heben können. Wir freuen uns darauf, Ihr Partner zu werden.</p></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<div class="text-center mb-6"><h2 class="text-3xl md:text-4xl font-bold mb-4"> Schluss mit dem IT-Stress. <span class="text-primary-yellow">Konzentrieren Sie sich wieder auf Ihr Geschäft.</span> </h2><p class="text-lg opacity-90 max-w-3xl mx-auto">Lassen Sie uns in einem unverbindlichen Gespräch herausfinden, wie wir Ihre IT in Leipzig auf ein neues Level heben können. Wir freuen uns darauf, Ihr Partner zu werden.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 <div class="bg-black/20 p-8 rounded-xl shadow-xl backdrop-blur-md" data-aos="fade-right"> <h3 class="text-2xl font-semibold mb-6 text-primary-yellow">Kontakt &amp; Support</h3><div class="space-y-4 text-lg"><div class="flex items-center"> <i class="fas fa-envelope fa-fw text-primary-yellow mr-3 text-xl"></i> <a class="hover:text-primary-yellow transition text-gray-200" href="mailto:support@ukns.eu">support@ukns.eu</a> </div><div class="flex items-center"> <i class="fas fa-clock fa-fw text-primary-yellow mr-3 text-xl"></i> <span class="text-gray-200">Mo - Fr: 08:00 - 18:00 Uhr</span> </div><div class="flex items-start mt-4"><i class="fas fa-map-marker-alt fa-fw text-primary-yellow mr-3 text-xl mt-1"></i><div class="text-gray-200">UKNS UG (haftungsbeschränkt)<br/>Friedrich - Ebert - Str. 85<br/>04109 Leipzig</div></div></div></div>
 <div class="bg-black/30 p-8 rounded-xl shadow-xl backdrop-blur-md" data-aos="fade-left"> <h3 class="text-2xl font-semibold mb-6 text-primary-yellow">Anfrage für IT-Support Beratung</h3><form action="https://mailform.ukns.eu/sendmail.php" method="POST" @submit.prevent="submitting = true; responseMessage = ''; responseStatus = ''; fetch('https://mailform.ukns.eu/sendmail.php', { method: 'POST', body: new FormData($event.target) }).then(res => res.json()).then(data => { responseMessage = data.message || 'Vielen Dank! Wir rufen Sie umgehend zurück.'; responseStatus = data.status || 'success'; if (data.status === 'success' || !data.status) { $event.target.reset(); } }).catch(() => { responseMessage = 'Vielen Dank! Ihre Rückruf-Anfrage wurde übermittelt. Wir rufen Sie umgehend zurück.'; responseStatus = 'success'; }).finally(() => submitting = false)" x-data="{ submitting: false, responseMessage: '', responseStatus: '' }" class="space-y-5">
               
@@ -568,7 +559,7 @@
 </main>
 <footer class="bg-dark-gray text-gray-300 pt-12 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center gap-8 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center gap-8 mb-6">
 <div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">UKNS IT-Premium Services</h3><p class="text-sm opacity-80">Ihr Partner für innovative IT-Lösungen und zuverlässigen Support in Leipzig.</p><p class="text-xs mt-4 opacity-90">UKNS UG (haftungsbeschränkt)</p></div>
 <div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">Unternehmen</h3><ul class="space-y-2 text-sm"><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/">Startseite</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/ueber-uns/">Über uns</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/jobs/">Jobs</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/kontakt/">Kontakt</a></li></ul></div>
 <div class="text-center md:text-left"><h3 class="text-lg font-semibold text-white mb-4">Rechtliches</h3><ul class="space-y-2 text-sm"><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/impressum/">Impressum</a></li><li><a class="hover:text-primary-yellow transition opacity-80 hover:opacity-100" href="/datenschutz/">Datenschutz</a></li></ul></div>
