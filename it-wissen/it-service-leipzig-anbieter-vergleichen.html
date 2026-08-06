@@ -33,7 +33,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://ukns.eu/"},{"@type":"ListItem","position":2,"name":"IT-Wissen","item":"https://ukns.eu/it-wissen/"},{"@type":"ListItem","position":3,"name":"IT-Service in Leipzig vergleichen","item":"https://ukns.eu/it-wissen/it-service-leipzig-anbieter-vergleichen.html"}]}</script>
 <link as="font" crossorigin href="/fonts/montserrat-v30-latin-700.woff2" rel="preload" type="font/woff2">
 <link as="font" crossorigin href="/fonts/open-sans-v43-latin-regular.woff2" rel="preload" type="font/woff2">
-<link href="/css/style.optimized.css?v=1785996448" rel="stylesheet">
+<link href="/css/style.optimized.css?v=1785996950" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,59 +120,49 @@
 </div>
 </nav>
 </header>
-<main class="bg-slate-950 text-slate-300 relative overflow-hidden">
-    <!-- Ambient Background Glow -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-20 pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.8) 0%, rgba(15,23,42,0) 70%);"></div>
+<main class="it-article-main">
+    <div class="it-ambient-glow"></div>
     
-    <article class="relative z-10 py-16 md:py-24">
-        <!-- Hero Centered -->
-        <header class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-            <span class="inline-block bg-slate-800 text-amber-400 text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full border border-amber-500/30 mb-6 shadow-[0_0_15px_rgba(245,166,35,0.15)]">Ratgeber für Firmenkunden</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight">Woran Sie merken, ob ein IT-Dienstleister wirklich zu Ihrem Unternehmen passt</h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed max-w-3xl mx-auto mb-10">Woran Sie einen guten IT-Service in Leipzig erkennen: klare Abläufe, ehrliche Preise, Sicherheit, Reaktionszeit und passende Betreuung statt reiner Werbeversprechen.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a class="inline-block bg-amber-500 text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-amber-400 transition-all shadow-lg hover:shadow-amber-500/25" href="/kontakt/?subject=IT-Service in Leipzig vergleichen">Anfrage stellen</a><a class="inline-block bg-slate-800 text-white font-bold px-8 py-4 rounded-xl border border-slate-700 hover:bg-slate-700 transition-all" href="/it-wissen/">Weitere Ratgeber</a>
+    <article class="it-article-wrapper">
+        <header class="it-container-hero">
+            <span class="it-kicker">Ratgeber für Firmenkunden</span>
+            <h1 class="it-title">Woran Sie merken, ob ein IT-Dienstleister wirklich zu Ihrem Unternehmen passt</h1>
+            <p class="it-lead">Woran Sie einen guten IT-Service in Leipzig erkennen: klare Abläufe, ehrliche Preise, Sicherheit, Reaktionszeit und passende Betreuung statt reiner Werbeversprechen.</p>
+            <div class="it-buttons">
+                <a class="it-btn-primary" href="/kontakt/?subject=IT-Service in Leipzig vergleichen">Anfrage stellen</a><a class="it-btn-secondary" href="/it-wissen/">Weitere Ratgeber</a>
             </div>
         </header>
 
-        <!-- Centered Image in 21st.dev Glass Frame -->
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-            <div class="p-2 md:p-4 bg-slate-900/50 backdrop-blur-2xl rounded-3xl border border-slate-700/50 shadow-2xl">
+        <div class="it-image-container">
+            <div class="it-image-frame">
                 <picture>
   <source type="image/webp" srcset="/images/it-service-leipzig-team-480.webp 480w, /images/it-service-leipzig-team-800.webp 800w, /images/it-service-leipzig-team-1200.webp 1200w" sizes="(min-width: 960px) 44vw, 100vw">
-  <img class="w-full rounded-2xl shadow-2xl border border-slate-700/50" class="article-hero-image" src="/images/it-service-leipzig-team-1200.jpg" srcset="/images/it-service-leipzig-team-480.jpg 480w, /images/it-service-leipzig-team-800.jpg 800w, /images/it-service-leipzig-team-1200.jpg 1200w" sizes="(min-width: 960px) 44vw, 100vw" width="1200" height="800" alt="IT-Service Anbieter in Leipzig vergleichen" fetchpriority="high" decoding="async">
+  <img class="it-image" src="/images/it-service-leipzig-team-1200.jpg" srcset="/images/it-service-leipzig-team-480.jpg 480w, /images/it-service-leipzig-team-800.jpg 800w, /images/it-service-leipzig-team-1200.jpg 1200w" sizes="(min-width: 960px) 44vw, 100vw" width="1200" height="800" alt="IT-Service Anbieter in Leipzig vergleichen" fetchpriority="high" decoding="async">
 </picture>
             </div>
         </div>
 
-        <!-- Centered Content -->
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-xl text-slate-200 font-medium leading-relaxed mb-16 text-center">Viele IT-Websites klingen auf den ersten Blick ähnlich: schnell, sicher, zuverlässig. Entscheidend ist aber, was im Alltag passiert, wenn Montagmorgen niemand auf den Server kommt, ein neues Notebook eingerichtet werden muss oder eine Geschäftsführung endlich wissen möchte, ob die Backups wirklich funktionieren.</p>
+        <div class="it-container-content">
+            <p class="it-intro">Viele IT-Websites klingen auf den ersten Blick ähnlich: schnell, sicher, zuverlässig. Entscheidend ist aber, was im Alltag passiert, wenn Montagmorgen niemand auf den Server kommt, ein neues Notebook eingerichtet werden muss oder eine Geschäftsführung endlich wissen möchte, ob die Backups wirklich funktionieren.</p>
             
-            <div class="space-y-8">
+            <div class="it-cards-wrapper">
 
-                <div class="bg-slate-900/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-slate-700/50 shadow-xl hover:border-slate-600 transition-colors">
-                    
-  <h2 class="text-2xl font-bold text-white mb-4">Nicht das größte Versprechen zählt, sondern der nächste klare Schritt</h2>
-  <p class="text-slate-400 text-lg leading-relaxed mb-6">Ein guter Anbieter nimmt Ihr Problem ernst, ohne es sofort größer zu machen als nötig. Sie sollten nach dem ersten Gespräch wissen, was geprüft wird, welche Risiken dringend sind und welche Themen warten können.</p>
-  <ul class="space-y-3 text-slate-300"><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Gibt es eine verständliche Ersteinschätzung, bevor Aufwand entsteht?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Wer entscheidet, ob Fernwartung reicht oder ein Vor-Ort-Termin sinnvoller ist?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Wird erklärt, was gemacht wurde, oder bleibt alles eine technische Blackbox?</span></li></ul>
-
+                <div class="it-glass-card">
+                    <h2 class="it-card-title">Nicht das größte Versprechen zählt, sondern der nächste klare Schritt</h2>
+                    <p class="it-card-text">Ein guter Anbieter nimmt Ihr Problem ernst, ohne es sofort größer zu machen als nötig. Sie sollten nach dem ersten Gespräch wissen, was geprüft wird, welche Risiken dringend sind und welche Themen warten können.</p>
+                    <ul class="it-card-list"><li><i class="fas fa-check-circle"></i><span>Gibt es eine verständliche Ersteinschätzung, bevor Aufwand entsteht?</span></li><li><i class="fas fa-check-circle"></i><span>Wer entscheidet, ob Fernwartung reicht oder ein Vor-Ort-Termin sinnvoller ist?</span></li><li><i class="fas fa-check-circle"></i><span>Wird erklärt, was gemacht wurde, oder bleibt alles eine technische Blackbox?</span></li></ul>
                 </div>
 
-                <div class="bg-slate-900/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-slate-700/50 shadow-xl hover:border-slate-600 transition-colors">
-                    
-  <h2 class="text-2xl font-bold text-white mb-4">Managed Services müssen zum Betrieb passen</h2>
-  <p class="text-slate-400 text-lg leading-relaxed mb-6">Monitoring, Patchmanagement und Helpdesk klingen gut. Für ein kleines Leipziger Büro mit acht Arbeitsplätzen braucht es aber andere Abläufe als für einen Produktionsbetrieb mit Schichtbetrieb. Gute IT-Betreuung fühlt sich nicht wie ein Paket von der Stange an.</p>
-  <ul class="space-y-3 text-slate-300"><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Welche Systeme sind geschäftskritisch und brauchen zuerst Schutz?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Wie werden Updates geplant, damit sie nicht mitten im Tagesgeschäft stören?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Welche Reaktionszeit ist realistisch und wirtschaftlich sinnvoll?</span></li></ul>
-
+                <div class="it-glass-card">
+                    <h2 class="it-card-title">Managed Services müssen zum Betrieb passen</h2>
+                    <p class="it-card-text">Monitoring, Patchmanagement und Helpdesk klingen gut. Für ein kleines Leipziger Büro mit acht Arbeitsplätzen braucht es aber andere Abläufe als für einen Produktionsbetrieb mit Schichtbetrieb. Gute IT-Betreuung fühlt sich nicht wie ein Paket von der Stange an.</p>
+                    <ul class="it-card-list"><li><i class="fas fa-check-circle"></i><span>Welche Systeme sind geschäftskritisch und brauchen zuerst Schutz?</span></li><li><i class="fas fa-check-circle"></i><span>Wie werden Updates geplant, damit sie nicht mitten im Tagesgeschäft stören?</span></li><li><i class="fas fa-check-circle"></i><span>Welche Reaktionszeit ist realistisch und wirtschaftlich sinnvoll?</span></li></ul>
                 </div>
 
-                <div class="bg-slate-900/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-slate-700/50 shadow-xl hover:border-slate-600 transition-colors">
-                    
-  <h2 class="text-2xl font-bold text-white mb-4">Sicherheit ist mehr als Antivirus</h2>
-  <p class="text-slate-400 text-lg leading-relaxed mb-6">Viele Wettbewerber sprechen über Cybersecurity. Wichtig ist, ob daraus konkrete Routinen werden: MFA, Backup-Tests, Benutzerrechte, Dokumentation und ein Notfallplan, den im Ernstfall auch jemand findet.</p>
-  <ul class="space-y-3 text-slate-300"><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Wer prüft regelmäßig, ob Backups wiederherstellbar sind?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Sind Admin-Zugänge, Passwörter und Fernwartung sauber geregelt?</span></li><li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i><span>Gibt es eine kurze Notfallliste für Ausfall, Verschlüsselung oder Datenverlust?</span></li></ul>
-
+                <div class="it-glass-card">
+                    <h2 class="it-card-title">Sicherheit ist mehr als Antivirus</h2>
+                    <p class="it-card-text">Viele Wettbewerber sprechen über Cybersecurity. Wichtig ist, ob daraus konkrete Routinen werden: MFA, Backup-Tests, Benutzerrechte, Dokumentation und ein Notfallplan, den im Ernstfall auch jemand findet.</p>
+                    <ul class="it-card-list"><li><i class="fas fa-check-circle"></i><span>Wer prüft regelmäßig, ob Backups wiederherstellbar sind?</span></li><li><i class="fas fa-check-circle"></i><span>Sind Admin-Zugänge, Passwörter und Fernwartung sauber geregelt?</span></li><li><i class="fas fa-check-circle"></i><span>Gibt es eine kurze Notfallliste für Ausfall, Verschlüsselung oder Datenverlust?</span></li></ul>
                 </div>
 
             </div>
