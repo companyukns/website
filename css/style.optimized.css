@@ -106,8 +106,16 @@ section p {
 .service-card-item-link {
   position: relative;
   overflow: hidden;
-  background: var(--surface);
+  background: #ffffff !important;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  border-radius: 0.75rem !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
 .service-card-item:hover,
