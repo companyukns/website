@@ -563,6 +563,13 @@ footer a:hover {
 .text-blue-600 { color: #2563EB !important; }
 .text-blue-800 { color: #1E40AF !important; }
 
+/* Global Form Label Legibility Guarantee */
+label, .form-label, label span {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  opacity: 1 !important;
+}
+
 /* Padding & Spacing Utilities (Ensures text never sticks to box edges!) */
 .p-4 { padding: 1rem !important; }
 .p-5 { padding: 1.25rem !important; }
